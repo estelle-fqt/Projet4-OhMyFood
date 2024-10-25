@@ -1,0 +1,89 @@
+header {
+  border: solid red;
+  width: 375px;
+}
+
+.navbar {
+  width: 375px;
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* ajouter ombre du bas */
+}
+
+.localisation {
+  width: 375px;
+  height: 50px;
+  background-color: #eaeaea;
+  border: none;
+}
+
+input:active {
+  border: none;
+}
+
+::placeholder {
+  color: #353535;
+  text-align: center;
+}
+
+.functioning {
+  border: solid purple;
+  height: 440px;
+  width: 375px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/*ajouter les steps dans une mixin*/
+.step1 {
+  border: solid pink;
+  height: 72.38px;
+  width: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step2 {
+  border: solid pink;
+  height: 72.38px;
+  width: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step3 {
+  border: solid pink;
+  height: 72.38px;
+  width: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.functioning p {
+  color: red;
+}
+
+.restaurants {
+  border: solid blue;
+  width: 375px;
+}
+
+.card {
+  border: solid green;
+}
+
+footer {
+  background-color: #353535;
+  width: 375px;
+  height: 186px;
+}
