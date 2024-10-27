@@ -9,7 +9,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* ajouter ombre du bas */
+}
+
+.navbar img {
+  height: 36px;
+  width: 197px;
 }
 
 .localisation {
@@ -26,6 +30,7 @@ input:active {
 ::placeholder {
   color: #353535;
   text-align: center;
+  font-size: 16px;
 }
 
 .functioning {
