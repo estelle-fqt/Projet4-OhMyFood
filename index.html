@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.scss">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Font-family Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -15,30 +19,41 @@
         <img src="dossier-assets/ohmyfood.png" alt="Logo OhMyFood">
      </div> 
       
-    </div class="explore">
+     <div class="explore">
       <i class="fa-solid fa-location-dot" style="color: #232323;"></i>
       <input type="text" class="localisation" placeholder="Paris, Belleville"></input>
-      <div>
+     </div>
+    
+    </header>
+    <main>
+      <div class="book">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
         <button>Explorer nos restaurants</button>
       </div>
-    </header>
-    <main>
       <section class="functioning">
         <h2>Fonctionnement</h2>
         <div class="steps">
-          <div class="step1">
-            <i></i> <!--icon-->
-            <p>Choisissez un restaurant</p>
+          <div class="step">
+            <div class="nbr">1</div>
+            <div class="step__contain">
+              <i class="fa-solid fa-mobile-screen-button" style="color: #7e7e7e;"></i>
+              <p>Choisissez un restaurant</p>
+            </div> 
           </div>
-          <div class="step2">
-            <i></i> <!--icon-->
-            <p>Composez votre menu</p>
+          <div class="step">
+            <div class="nbr">2</div>
+            <div class="step__contain">
+              <i class="fa-solid fa-list-ul" style="color: #7e7e7e;"></i>
+              <p>Composez votre menu</p>
+            </div>
           </div>
-          <div class="step3">
-            <i></i> <!--icon-->
-            <p>Dégustez au restaurant</p>
+          <div class="step">
+            <div class="nbr">3</div>
+            <div class="step__contain">
+              <i class="fa-solid fa-store" style="color: #9356dc;"></i>
+              <p>Dégustez au restaurant</p>
+            </div>
           </div>
         </div>
       </section>

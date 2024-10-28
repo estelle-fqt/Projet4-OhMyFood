@@ -1,6 +1,17 @@
-header {
-  border: solid red;
+/*Variables*/
+body {
   width: 375px;
+  background-color: #f3f3f3;
+  border: solid;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  width: 375px;
+  height: 113px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
 }
 
 .navbar {
@@ -9,86 +20,116 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ffffff;
 }
-
 .navbar img {
-  height: 36px;
   width: 197px;
+  height: 36px;
 }
 
-.localisation {
+.explore {
   width: 375px;
   height: 50px;
   background-color: #eaeaea;
-  border: none;
+  display: flex;
+  align-items: center;
+  align-content: baseline;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
-
-input:active {
+.explore input {
   border: none;
-}
-
-::placeholder {
-  color: #353535;
-  text-align: center;
+  background-color: #eaeaea;
+  width: 109px;
+  height: 19px;
   font-size: 16px;
+  margin-left: 20px;
+}
+.explore input::placeholder {
+  color: #353535;
+}
+.explore i {
+  width: 12px;
+  height: 16px;
+  color: #353535;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 287px;
+}
+.book h1 {
+  width: 275px;
+  height: 68px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 39px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.book p {
+  margin-top: 0;
+  width: 315px;
+  height: 46px;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+}
+.book button {
+  width: 210px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(#ff79da, #9356dc);
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 27px;
 }
 
 .functioning {
-  border: solid purple;
+  background-color: #ffffff;
   height: 440px;
-  width: 375px;
+}
+.functioning h2 {
+  padding-top: 48px;
+  padding-left: 20px;
+  padding-bottom: 26px;
+  font-size: 24px;
 }
 
 .steps {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+}
+.steps .step__contain {
+  background-color: #f6f6f6;
+  width: 322.49px;
+  height: 72.38px;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: solid;
+}
+.steps i {
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
-/*ajouter les steps dans une mixin*/
-.step1 {
-  border: solid pink;
-  height: 72.38px;
-  width: 335px;
+.nbr {
+  background-color: #9356dc;
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.step2 {
-  border: solid pink;
-  height: 72.38px;
-  width: 335px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.step3 {
-  border: solid pink;
-  height: 72.38px;
-  width: 335px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.functioning p {
-  color: red;
-}
-
-.restaurants {
-  border: solid blue;
-  width: 375px;
-}
-
-.card {
-  border: solid green;
-}
-
-footer {
-  background-color: #353535;
-  width: 375px;
-  height: 186px;
-}
+/*# sourceMappingURL=style.css.map */
