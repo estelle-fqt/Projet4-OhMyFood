@@ -6,6 +6,7 @@ $blue-dark: #003a68;
 $purple: #9356dc;
 $white: #ffffff;
 $grey-body: #f3f3f3;
+$dark-grey: #353535;
 
 body {
   width: 375px;
@@ -53,13 +54,13 @@ header {
     font-size: 16px;
     margin-left: 20px;
     &::placeholder {
-      color: #353535;
+      color: $dark-grey;
     }
   }
   i {
     width: 12px;
     height: 16px;
-    color: #353535;
+    color: $dark-grey;
   }
 }
 
@@ -101,18 +102,21 @@ header {
 .functioning {
   background-color: $white;
   height: 440px;
-  h2 {
-    padding-top: 48px;
-    padding-left: 20px;
-    padding-bottom: 26px;
-    font-size: 24px;
-  }
+}
+
+h2 {
+  padding-top: 48px;
+  padding-left: 20px;
+  padding-bottom: 26px;
+  font-size: 24px;
 }
 
 .steps {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
+
   .step__contain {
     background-color: #f6f6f6;
     width: 322.49px;
@@ -122,11 +126,20 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border: solid;
   }
   i {
     padding-left: 18px;
     padding-right: 18px;
+  }
+  .step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
   }
 }
 
@@ -139,4 +152,81 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.restaurants-cards {
+  width: 340px;
+  height: 1058px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card {
+  width: 340px;
+  height: 251px;
+  border-radius: 15px;
+  background-color: $white;
+
+  img {
+    width: 340px;
+    height: 160px;
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+.description {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  .who-where {
+    color: #000000;
+  }
+  h3 {
+    margin: 0;
+    padding-bottom: 1px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  p {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 300;
+  }
+}
+
+footer {
+  background-color: $dark-grey;
+  padding: 15px;
+  p {
+    color: $white;
+    font-family: Shrikhand;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: italic;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+  .links_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 16px;
+  }
+  .mentions {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
 }
