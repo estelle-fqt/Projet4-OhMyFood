@@ -1,9 +1,12 @@
 /*Variables*/
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   width: 375px;
   background-color: #f3f3f3;
   border: solid;
-  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -11,7 +14,6 @@ header {
   height: 113px;
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
 }
 
 .navbar {
@@ -118,13 +120,14 @@ h2 {
   align-items: center;
 }
 .steps i {
-  padding-left: 18px;
+  padding-left: 35px;
   padding-right: 18px;
 }
 .steps .step {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
 }
 .steps p {
   font-size: 16px;
@@ -133,11 +136,14 @@ h2 {
 }
 
 .nbr {
+  position: absolute;
+  top: 23px;
+  left: -12px;
   background-color: #9356dc;
   color: #ffffff;
   width: 24px;
   height: 24px;
-  border-radius: 100px;
+  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,11 +167,27 @@ a {
   height: 251px;
   border-radius: 15px;
   background-color: #ffffff;
+  position: relative;
 }
 .card img {
   width: 340px;
   height: 160px;
   border-radius: 15px 15px 0 0;
+}
+.card .new {
+  position: absolute;
+  top: 15px;
+  left: 245px;
+  width: 80px;
+  height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  color: #008766;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .description {
@@ -191,6 +213,21 @@ a {
   font-size: 17px;
   font-weight: 300;
 }
+.description i {
+  width: 22px;
+  height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description #heart-color {
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
 
 footer {
   background-color: #353535;
@@ -212,6 +249,11 @@ footer .links_footer {
   flex-direction: column;
   gap: 7px;
   font-size: 16px;
+}
+footer i {
+  width: 11px;
+  height: 13px;
+  margin-right: 10px;
 }
 footer .mentions {
   display: flex;
