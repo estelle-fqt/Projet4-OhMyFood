@@ -50,6 +50,9 @@ header {
 .explore input::placeholder {
   color: #353535;
 }
+.explore input:focus {
+  outline: none;
+}
 .explore i {
   width: 12px;
   height: 16px;
@@ -89,6 +92,12 @@ header {
   font-size: 16px;
   font-weight: 500;
   margin-top: 27px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.book button:hover {
+  opacity: 0.85;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .functioning {
@@ -219,6 +228,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.description i:hover {
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 .description #heart-color {
   background: linear-gradient(#9356dc, #ff79da);
