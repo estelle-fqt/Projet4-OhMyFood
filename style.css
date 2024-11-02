@@ -290,11 +290,12 @@ footer i {
   }
   h2 {
     padding: 0;
-    padding-left: 195px;
+    padding-left: 180px;
   }
   .steps {
     flex-direction: row;
     justify-content: center;
+    gap: 40px;
   }
   .restaurants-cards {
     height: 608px;
@@ -305,10 +306,13 @@ footer i {
     margin-bottom: 20px;
   }
   .card {
-    width: 475px;
+    width: 490px;
   }
   .card img {
-    width: 475px;
+    width: 490px;
+  }
+  .card .new {
+    left: 395px;
   }
   footer {
     flex-direction: row-reverse;
@@ -316,7 +320,6 @@ footer i {
     gap: 16px;
   }
   footer .links_footer {
-    border: solid;
     flex-direction: row;
     align-items: center;
     gap: 20px;
