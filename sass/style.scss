@@ -5,7 +5,7 @@ $blue-light: #89c8fa;
 $blue-dark: #003a68;
 $purple: #9356dc;
 $white: #ffffff;
-$grey-body: #f3f3f3;
+$grey-body: #f6f6f6;
 $dark-grey: #353535;
 
 * {
@@ -13,19 +13,16 @@ $dark-grey: #353535;
 }
 
 body {
-  /*width: 375px;*/
   background-color: $grey-body;
 }
 
 header {
-  /*width 375px*/
-  height: 113px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .navbar {
-  /*width: 375px;*/
   height: 63px;
   display: flex;
   justify-content: center;
@@ -39,7 +36,6 @@ header {
 }
 
 .explore {
-  /*width: 375px;*/
   height: 50px;
   background-color: #eaeaea;
   display: flex;
@@ -91,22 +87,26 @@ header {
     font-size: 18px;
     text-align: center;
   }
-  button {
-    width: 210px;
-    height: 50px;
-    border-radius: 25px;
-    background: linear-gradient(#ff79da, #9356dc);
-    border: none;
-    color: $white;
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 27px;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    &:hover {
-      opacity: 0.85;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    }
+}
+
+button {
+  width: 210px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(#ff79da, #9356dc);
+  border: none;
+  color: $white;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  &:hover {
+    opacity: 0.85;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -296,6 +296,8 @@ footer {
 }
 
 @media (min-width: 1440px) {
+  /*mettre le logo plus grand*/
+
   .functioning {
     height: 228.38px;
     display: flex;
@@ -341,5 +343,100 @@ footer {
       flex-direction: row;
       gap: 20px;
     }
+  }
+}
+
+/*Style scss Pages restaurants*/
+
+.fa-arrow-left {
+  position: absolute;
+  top: 16.5px;
+  left: 16.5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #000000;
+  &:hover {
+    border: none;
+  }
+}
+
+.img_restaurants {
+  height: 275px;
+  object-fit: cover;
+}
+
+.menu_restaurants {
+  border: solid;
+  top: 300px;
+  background-color: $grey-body;
+  border-radius: 30px 30px 0 0;
+  min-width: 100%;
+
+  .header_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    gap: 20px;
+    h1 {
+      font-family: Shrikhand;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 28px;
+    }
+  }
+}
+
+.menu {
+  .title {
+    height: 27px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 10px;
+    position: relative;
+    /*border-bottom: solid $green-light 3px;*/
+    /*text-decoration: underline solid $green-light 3px;*/
+  }
+  .underline-title {
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background-color: $green-light;
+    margin-left: 10px;
+  }
+}
+
+.contain_menu {
+  height: 72px;
+  margin: 20px 10px 20px 10px;
+  background-color: $white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 20px 20px 20px;
+
+  .contain_meal {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .meal {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .meal_description {
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .price {
+    font-size: 15px;
+    font-weight: 700;
   }
 }
