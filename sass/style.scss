@@ -295,6 +295,8 @@ footer {
   }
 }
 
+/*media querries index.html*/
+
 @media (min-width: 1440px) {
   /*mettre le logo plus grand*/
 
@@ -344,6 +346,16 @@ footer {
       gap: 20px;
     }
   }
+
+  /*media querries pages restaurants*/
+
+  body {
+    background-color: $white;
+  }
+  .menu_restaurants {
+    width: 1055px;
+    margin: 0 192.5px;
+  }
 }
 
 /*Style scss Pages restaurants*/
@@ -367,16 +379,17 @@ footer {
 .img_restaurants {
   height: 275px;
   object-fit: cover;
+  width: 100%;
 }
 
 .menu_restaurants {
-  border: solid;
+  margin-top: -20px;
   top: 300px;
   background-color: $grey-body;
   border-radius: 30px 30px 0 0;
-  min-width: 100%;
 
   .header_menu {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -398,8 +411,6 @@ footer {
     font-weight: 300;
     margin-left: 10px;
     position: relative;
-    /*border-bottom: solid $green-light 3px;*/
-    /*text-decoration: underline solid $green-light 3px;*/
   }
   .underline-title {
     position: absolute;
@@ -439,4 +450,10 @@ footer {
     font-size: 15px;
     font-weight: 700;
   }
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 47px;
 }
