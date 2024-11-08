@@ -281,64 +281,6 @@ footer i {
   margin-right: 10px;
 }
 
-/*media querries index.html*/
-@media (min-width: 1440px) {
-  /*mettre le logo plus grand*/
-  .functioning {
-    height: 228.38px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  h2 {
-    padding: 0;
-    padding-left: 180px;
-  }
-  .steps {
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-  }
-  .restaurants-cards {
-    height: 608px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px 100px;
-    margin-bottom: 20px;
-  }
-  .card {
-    width: 490px;
-  }
-  .card img {
-    width: 490px;
-  }
-  .card .new {
-    left: 395px;
-  }
-  footer {
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    gap: 16px;
-  }
-  footer .links_footer {
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-  }
-  footer .mentions {
-    flex-direction: row;
-    gap: 20px;
-  }
-  /*media querries pages restaurants*/
-  body {
-    background-color: #ffffff;
-  }
-  .menu_restaurants {
-    width: 1055px;
-    margin: 0 192.5px;
-  }
-}
 /*Style scss Pages restaurants*/
 .fa-arrow-left {
   position: absolute;
@@ -408,6 +350,7 @@ footer i {
   justify-content: space-between;
   align-items: flex-end;
   padding: 0 20px 20px 20px;
+  cursor: pointer;
 }
 .contain_menu .contain_meal {
   display: flex;
@@ -426,11 +369,92 @@ footer i {
   font-size: 15px;
   font-weight: 700;
 }
+.contain_menu .check {
+  display: none;
+}
+
+.contain_menu:active {
+  position: relative;
+}
+.contain_menu:active .price {
+  transform: translate(-50px);
+}
+.contain_menu:active .check {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  border-radius: 0 20px 20px 0;
+  background-color: #99e2d0;
+  margin-left: 0;
+  height: 100%;
+  width: 59px;
+}
 
 .order {
   display: flex;
   justify-content: center;
-  margin-bottom: 47px;
+  padding-bottom: 47px;
+}
+
+/*media querries index.html*/
+@media (min-width: 1440px) {
+  /*mettre le logo plus grand*/
+  .functioning {
+    height: 228.38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h2 {
+    padding: 0;
+    padding-left: 180px;
+  }
+  .steps {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+  .restaurants-cards {
+    height: 608px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 100px;
+    margin-bottom: 20px;
+  }
+  .card {
+    width: 490px;
+  }
+  .card img {
+    width: 490px;
+  }
+  .card .new {
+    left: 395px;
+  }
+  footer {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  footer .links_footer {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  footer .mentions {
+    flex-direction: row;
+    gap: 20px;
+  }
+  /*media querries pages restaurants*/
+  body {
+    background-color: #ffffff;
+  }
+  .menu_restaurants {
+    width: 1055px;
+    margin: 0 192.5px;
+    padding-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

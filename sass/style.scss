@@ -295,69 +295,6 @@ footer {
   }
 }
 
-/*media querries index.html*/
-
-@media (min-width: 1440px) {
-  /*mettre le logo plus grand*/
-
-  .functioning {
-    height: 228.38px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  h2 {
-    padding: 0;
-    padding-left: 180px;
-  }
-  .steps {
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-  }
-  .restaurants-cards {
-    height: 608px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px 100px;
-    margin-bottom: 20px;
-  }
-  .card {
-    width: 490px;
-    img {
-      width: 490px;
-    }
-    .new {
-      left: 395px;
-    }
-  }
-  footer {
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    gap: 16px;
-    .links_footer {
-      flex-direction: row;
-      align-items: center;
-      gap: 20px;
-    }
-    .mentions {
-      flex-direction: row;
-      gap: 20px;
-    }
-  }
-
-  /*media querries pages restaurants*/
-
-  body {
-    background-color: $white;
-  }
-  .menu_restaurants {
-    width: 1055px;
-    margin: 0 192.5px;
-  }
-}
-
 /*Style scss Pages restaurants*/
 
 .fa-arrow-left {
@@ -431,6 +368,7 @@ footer {
   justify-content: space-between;
   align-items: flex-end;
   padding: 0 20px 20px 20px;
+  cursor: pointer;
 
   .contain_meal {
     display: flex;
@@ -450,10 +388,96 @@ footer {
     font-size: 15px;
     font-weight: 700;
   }
+
+  .check {
+    display: none;
+  }
+}
+
+.contain_menu:active {
+  position: relative;
+  .price {
+    transform: translate(-50px);
+  }
+  .check {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    border-radius: 0 20px 20px 0;
+    background-color: $green-light;
+    margin-left: 0;
+    height: 100%;
+    width: 59px;
+  }
 }
 
 .order {
   display: flex;
   justify-content: center;
-  margin-bottom: 47px;
+  padding-bottom: 47px;
+}
+
+/*media querries index.html*/
+
+@media (min-width: 1440px) {
+  /*mettre le logo plus grand*/
+
+  .functioning {
+    height: 228.38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h2 {
+    padding: 0;
+    padding-left: 180px;
+  }
+  .steps {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+  .restaurants-cards {
+    height: 608px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 100px;
+    margin-bottom: 20px;
+  }
+  .card {
+    width: 490px;
+    img {
+      width: 490px;
+    }
+    .new {
+      left: 395px;
+    }
+  }
+  footer {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 16px;
+    .links_footer {
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+    }
+    .mentions {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  /*media querries pages restaurants*/
+
+  body {
+    background-color: $white;
+  }
+  .menu_restaurants {
+    width: 1055px;
+    margin: 0 192.5px;
+    padding-bottom: 0;
+  }
 }
