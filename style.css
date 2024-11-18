@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Variables*/
 * {
   font-family: "Roboto", sans-serif;
@@ -5,6 +6,7 @@
 
 body {
   background-color: #f6f6f6;
+  margin: 0;
 }
 
 header {
@@ -19,6 +21,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .navbar img {
   width: 197px;
@@ -32,7 +35,7 @@ header {
   align-items: center;
   align-content: baseline;
   justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 .explore input {
   border: none;
@@ -93,6 +96,7 @@ button {
   align-items: center;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: opacity 1000ms;
 }
 button:hover {
   opacity: 0.85;
@@ -255,8 +259,8 @@ footer {
 }
 footer p {
   color: #ffffff;
-  font-family: Shrikhand;
-  font-weight: bold;
+  font-family: "Shrikhand";
+  font-weight: 400;
   font-size: 18px;
   font-style: italic;
 }
@@ -304,11 +308,26 @@ footer i {
   width: 100%;
 }
 
+.menu_restaurants_img {
+  z-index: 0;
+  position: absolute;
+  top: 63px;
+  width: 100%;
+}
+
+.menu_restaurants_contain {
+  border-radius: 30px 30px 0 0;
+  z-index: 1;
+  position: absolute;
+  top: 283px;
+  width: 100%;
+  background-color: #f6f6f6;
+}
+
 .menu_restaurants {
   margin-top: -20px;
   top: 300px;
   background-color: #f6f6f6;
-  border-radius: 30px 30px 0 0;
 }
 .menu_restaurants .header_menu {
   width: 100%;
@@ -319,9 +338,9 @@ footer i {
   gap: 20px;
 }
 .menu_restaurants .header_menu h1 {
-  font-family: Shrikhand;
+  font-family: "Shrikhand";
   font-style: italic;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 28px;
 }
 
@@ -351,6 +370,7 @@ footer i {
   align-items: flex-end;
   padding: 0 20px 20px 20px;
   cursor: pointer;
+  /* Animation réservation plat */
 }
 .contain_menu .contain_meal {
   display: flex;
@@ -371,6 +391,7 @@ footer i {
 }
 .contain_menu .check {
   display: none;
+  transition: transform 2s;
 }
 
 .contain_menu:active {
@@ -389,6 +410,7 @@ footer i {
   margin-left: 0;
   height: 100%;
   width: 59px;
+  transform: scaleX(1);
 }
 
 .order {
