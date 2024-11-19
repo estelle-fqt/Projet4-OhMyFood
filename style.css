@@ -1,5 +1,96 @@
 @charset "UTF-8";
 /*Variables*/
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  animation-name: loader;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+.loader .lettre {
+  display: auto;
+  color: #9356dc;
+  font-size: 50px;
+  letter-spacing: 15px;
+  animation: flash 1.2s linear infinite;
+}
+
+@keyframes loader {
+  /* animation du chargement de la page */
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none; /* pour que le loader ne reste pas en position: fixed; ce qui bloque les interactions*/
+  }
+}
+@keyframes flash {
+  /* animation du loader */
+  0% {
+    color: #99e2d0;
+    text-shadow: 0 0 7px #99e2d0;
+  }
+  90% {
+    color: #9356dc;
+    text-shadow: none;
+  }
+  100% {
+    color: #99e2d0;
+    text-shadow: 0 0 7px #99e2d0;
+  }
+}
+/* effet de décalage sur chaque lettre */
+.lettre:nth-child(1) {
+  /* sélection du premier enfant (i-e première lettre)*/
+  animation-delay: 0.1s;
+}
+
+.lettre:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lettre:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.lettre:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.lettre:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.lettre:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.lettre:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.lettre:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.lettre:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.lettre:nth-child(10) {
+  animation-delay: 1s;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -463,12 +554,24 @@ input[type=checkbox].check:checked + label .iconCheck {
   transition: transform cubic-bezier(0, 0, 1, 1);
   animation-name: reservation;
   animation-duration: 2000ms;
-  animation-fill-mode: forwards;
+  /*animation-fill-mode: forwards;*/
 }
 
 @keyframes reservation {
   0% {
     transform: scaleX(0);
+  }
+  20% {
+    transform: scaleX(0.2);
+  }
+  40% {
+    transform: scaleX(0.4);
+  }
+  60% {
+    transform: scaleX(0.6);
+  }
+  80% {
+    transform: scaleX(0.8);
   }
   100% {
     transform: scaleX(1);
