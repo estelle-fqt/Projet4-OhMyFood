@@ -437,20 +437,32 @@ footer {
 
 /* Animation réservation plat */
 
-.iconCheck {
-  width: 59px;
-  height: 100%;
-  background-color: $green-light;
-  border-radius: 0 20px 20px 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  position: absolute;
+.checkBook {
+  .iconCheck {
+    width: 59px;
+    height: 100%;
+    background-color: $green-light;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    animation-name: reservation;
+    /*&:active {
+      opacity: 1;
+      transform: scaleX(1);
+      transform-origin: 100% 0%;
+      transition: transform cubic-bezier(0, 0, 1, 1);
+      animation-name: reservation;
+      animation-duration: 3000ms;
+      animation-fill-mode: forwards;
+    }*/
+  }
 }
 
 .price {
@@ -463,42 +475,35 @@ footer {
   input[type="checkbox"].check {
     display: none;
   }
+}
 
-  input[type="checkbox"].check:checked + label {
-    content: "";
-    .iconCheck {
-      opacity: 1;
-    }
+input[type="checkbox"].check:checked + label {
+  content: "";
+  .iconCheck {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: 100% 0%;
+    transition: transform cubic-bezier(0, 0, 1, 1);
+    animation-name: reservation;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes reservation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }
 
 .contain_menu:active {
   .price {
-    transform: translate(-50px);
+    transform: translate(-30px);
   }
 }
-
-/*
-input[type="checkbox"].Heart {
-  display: none;
-}
-
-input[type="checkbox"].Heart:checked + label {
-  content: "";
-  #iconHeartRegular {
-    opacity: 0;
-  }
-  #iconHeartSolid {
-    opacity: 1;
-    background: linear-gradient(#9356dc, #ff79da);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-  }
-}
-*/
 
 .order {
   display: flex;

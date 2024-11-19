@@ -417,7 +417,7 @@ footer i {
 }
 
 /* Animation réservation plat */
-.iconCheck {
+.checkBook .iconCheck {
   width: 59px;
   height: 100%;
   background-color: #99e2d0;
@@ -431,6 +431,16 @@ footer i {
   text-align: center;
   opacity: 0;
   position: absolute;
+  animation-name: reservation;
+  /*&:active {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: 100% 0%;
+    transition: transform cubic-bezier(0, 0, 1, 1);
+    animation-name: reservation;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+  }*/
 }
 
 .price {
@@ -442,38 +452,32 @@ footer i {
 .checkBook input[type=checkbox].check {
   display: none;
 }
-.checkBook input[type=checkbox].check:checked + label {
+
+input[type=checkbox].check:checked + label {
   content: "";
 }
-.checkBook input[type=checkbox].check:checked + label .iconCheck {
+input[type=checkbox].check:checked + label .iconCheck {
   opacity: 1;
+  transform: scaleX(1);
+  transform-origin: 100% 0%;
+  transition: transform cubic-bezier(0, 0, 1, 1);
+  animation-name: reservation;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
 }
 
+@keyframes reservation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 .contain_menu:active .price {
-  transform: translate(-50px);
+  transform: translate(-30px);
 }
 
-/*
-input[type="checkbox"].Heart {
-  display: none;
-}
-
-input[type="checkbox"].Heart:checked + label {
-  content: "";
-  #iconHeartRegular {
-    opacity: 0;
-  }
-  #iconHeartSolid {
-    opacity: 1;
-    background: linear-gradient(#9356dc, #ff79da);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-  }
-}
-*/
 .order {
   display: flex;
   justify-content: center;
