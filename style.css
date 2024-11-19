@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Variables*/
+/* Animation Loader HomePage */
 .loader {
   position: fixed;
   width: 100%;
@@ -14,7 +15,6 @@
   animation-fill-mode: both;
 }
 .loader .lettre {
-  display: auto;
   color: #9356dc;
   font-size: 50px;
   letter-spacing: 15px;

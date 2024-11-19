@@ -8,6 +8,7 @@ $white: #ffffff;
 $grey-body: #f6f6f6;
 $dark-grey: #353535;
 
+/* Animation Loader HomePage */
 .loader {
   position: fixed;
   width: 100%;
@@ -22,7 +23,6 @@ $dark-grey: #353535;
   animation-fill-mode: both;
 
   .lettre {
-    display: auto;
     color: $purple;
     font-size: 50px;
     letter-spacing: 15px;
