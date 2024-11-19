@@ -563,7 +563,15 @@ footer i {
 }
 
 /* Animation réservation plat */
-.checkBook .iconCheck {
+input[type=checkbox]#checkbox_contain_menu {
+  display: none;
+}
+
+/**** Animation au check ****/
+input[type=checkbox]#checkbox_contain_menu:checked + label {
+  content: "";
+}
+input[type=checkbox]#checkbox_contain_menu:checked + label .iconCheck {
   width: 59px;
   height: 100%;
   background-color: #99e2d0;
@@ -575,67 +583,78 @@ footer i {
   justify-content: center;
   align-items: center;
   text-align: center;
-  opacity: 0;
-  position: absolute;
-  animation-name: reservation;
-  /*&:active {
-    opacity: 1;
-    transform: scaleX(1);
-    transform-origin: 100% 0%;
-    transition: transform cubic-bezier(0, 0, 1, 1);
-    animation-name: reservation;
-    animation-duration: 3000ms;
-    animation-fill-mode: forwards;
-  }*/
-}
-
-.price {
-  position: absolute;
-  right: 10px;
-  top: 20px;
-}
-
-.checkBook input[type=checkbox].check {
-  display: none;
-}
-
-input[type=checkbox].check:checked + label {
-  content: "";
-}
-input[type=checkbox].check:checked + label .iconCheck {
-  opacity: 1;
-  transform: scaleX(1);
+  animation-name: meal_reservation;
   transform-origin: 100% 0%;
-  transition: transform cubic-bezier(0, 0, 1, 1);
-  animation-name: reservation;
-  animation-duration: 2000ms;
-  /*animation-fill-mode: forwards;*/
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+input[type=checkbox]#checkbox_contain_menu:checked + label .price {
+  transform: translate(-50px);
+  animation-name: price;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
 }
 
-@keyframes reservation {
+@keyframes meal_reservation {
   0% {
     transform: scaleX(0);
-  }
-  20% {
-    transform: scaleX(0.2);
-  }
-  40% {
-    transform: scaleX(0.4);
-  }
-  60% {
-    transform: scaleX(0.6);
-  }
-  80% {
-    transform: scaleX(0.8);
   }
   100% {
     transform: scaleX(1);
   }
 }
-.contain_menu:active .price {
-  transform: translate(-30px);
+@keyframes price {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1);
+  }
+}
+/**** Animation au dé-check ****/
+input[type=checkbox]#checkbox_contain_menu:not(:checked) + label {
+  content: "";
+}
+input[type=checkbox]#checkbox_contain_menu:not(:checked) + label .iconCheck {
+  width: 59px;
+  height: 100%;
+  background-color: #99e2d0;
+  border-radius: 0 20px 20px 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation-name: meal_reservation_slideOut;
+  transform-origin: 100% 0%;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+input[type=checkbox]#checkbox_contain_menu:not(:checked) + label .price {
+  animation-name: price_slideOut;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
 }
 
+@keyframes meal_reservation_slideOut {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes price_slideOut {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .order {
   display: flex;
   justify-content: center;

@@ -59,35 +59,35 @@
               <span class="title">ENTREES</span>
               <div class="underline-title"></div>
               <!-- Syntaxe BEM ?? -->
-              <div class="contain_menu contain_menu1">
-                <div class="contain_meal">
-                  <span class="meal">Fricassée d'escargots</span>
-                  <span class="meal_description">Au piment d'Espelette</span>
-                </div>
-                <div class="price">
+              <!-- input contain_menu -->
+              <input type="checkbox" id="checkbox_contain_menu" />
+              <label for="checkbox_contain_menu"
+                ><div class="contain_menu contain_menu1">
+                  <div class="contain_meal">
+                    <span class="meal">Fricassée d'escargots</span>
+                    <span class="meal_description">Au piment d'Espelette</span>
+                  </div>
+                  <i
+                    class="fa-solid fa-circle-check iconCheck"
+                    style="color: #ffffff;"
+                  ></i>
                   <span class="price">25€</span>
-                </div>
-                <div class="checkBook">
-                  <input type="checkbox" id="check" class="check" />
-                  <label for="check">
-                    <i
-                      class="fa-solid fa-circle-check iconCheck"
-                      style="color: #ffffff;"
-                    ></i>
-                  </label>
-                </div>
-              </div>
-              <div class="contain_menu contain_menu2">
-                <div class="contain_meal">
-                  <span class="meal">Foie gras de canard mi-cuit</span>
-                  <span class="meal_description"
-                    >Et ses copeaux de truff noire</span
-                  >
-                </div>
-                <div>
+                </div></label
+              >
+              <!-- ici input dans le label-->
+              <label>
+                <input type="checkbox" />
+                <div class="contain_menu contain_menu2">
+                  <div class="contain_meal">
+                    <span class="meal">Foie gras de canard mi-cuit</span>
+                    <span class="meal_description"
+                      >Et ses copeaux de truff noire</span
+                    >
+                  </div>
                   <span class="price">35€</span>
                 </div>
-              </div>
+              </label>
+
               <div class="contain_menu contain_menu3">
                 <div class="contain_meal">
                   <span class="meal">Oeuf au plat</span>
