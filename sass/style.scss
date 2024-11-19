@@ -500,6 +500,10 @@ footer {
   padding: 0 20px 20px 20px;
   cursor: pointer;
   position: relative;
+  /* animation apparition des plats */
+  animation: appearance 5s;
+  transform-origin: 0% 0%;
+  /*********************************/
 
   .contain_meal {
     display: flex;
@@ -521,8 +525,50 @@ footer {
   }
 }
 
-/* Animation réservation plat */
+/* Animation apparition plats */
+@keyframes appearance {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
 
+.contain_menu1 {
+  animation-delay: 0.1s;
+}
+.contain_menu2 {
+  animation-delay: 0.5s;
+}
+.contain_menu3 {
+  animation-delay: 1s;
+}
+.contain_menu4 {
+  animation-delay: 1.5s;
+}
+.contain_menu5 {
+  animation-delay: 2s;
+}
+.contain_menu6 {
+  animation-delay: 2.5s;
+}
+.contain_menu7 {
+  animation-delay: 3s;
+}
+.contain_menu8 {
+  animation-delay: 3.5s;
+}
+.contain_menu9 {
+  animation-delay: 4s;
+}
+.contain_menu10 {
+  animation-delay: 4.5s;
+}
+
+/* Animation réservation plat */
 .checkBook {
   .iconCheck {
     width: 59px;
