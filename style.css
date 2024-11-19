@@ -563,15 +563,105 @@ footer i {
 }
 
 /* Animation réservation plat */
-input[type=checkbox]#checkbox_contain_menu {
+/*input[type="checkbox"]#checkbox_contain_menu {
   display: none;
 }
 
 /**** Animation au check ****/
-input[type=checkbox]#checkbox_contain_menu:checked + label {
+/*input[type="checkbox"]#checkbox_contain_menu:checked + label {
   content: "";
+  .iconCheck {
+    width: 59px;
+    height: 100%;
+    background-color: $green-light;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation-name: meal_reservation;
+    transform-origin: 100% 0%;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+  }
+  .price {
+    transform: translate(-50px);
+    animation-name: price;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+  }
 }
-input[type=checkbox]#checkbox_contain_menu:checked + label .iconCheck {
+
+@keyframes meal_reservation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes price {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1);
+  }
+}*/
+/**** Animation au dé-check ****/
+/*input[type="checkbox"]#checkbox_contain_menu:not(:checked) + label {
+  content: "";
+  .iconCheck {
+    width: 59px;
+    height: 100%;
+    background-color: $green-light;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation-name: meal_reservation_slideOut;
+    transform-origin: 100% 0%;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+  .price {
+    animation-name: price_slideOut;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes meal_reservation_slideOut {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes price_slideOut {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}*/
+/*********************** test input ds label **************************/
+input[type=checkbox] {
+  display: none;
+}
+
+/* animation au check */
+input[type=checkbox]:checked + .contain_menu .iconCheck {
   width: 59px;
   height: 100%;
   background-color: #99e2d0;
@@ -588,7 +678,7 @@ input[type=checkbox]#checkbox_contain_menu:checked + label .iconCheck {
   animation-duration: 0.5s;
   animation-timing-function: linear;
 }
-input[type=checkbox]#checkbox_contain_menu:checked + label .price {
+input[type=checkbox]:checked + .contain_menu .price {
   transform: translate(-50px);
   animation-name: price;
   animation-duration: 0.5s;
@@ -611,11 +701,8 @@ input[type=checkbox]#checkbox_contain_menu:checked + label .price {
     transform: translateX(1);
   }
 }
-/**** Animation au dé-check ****/
-input[type=checkbox]#checkbox_contain_menu:not(:checked) + label {
-  content: "";
-}
-input[type=checkbox]#checkbox_contain_menu:not(:checked) + label .iconCheck {
+/* Animation au dé-check */
+input[type=checkbox]:not(:checked) + .contain_menu .iconCheck {
   width: 59px;
   height: 100%;
   background-color: #99e2d0;
@@ -633,7 +720,7 @@ input[type=checkbox]#checkbox_contain_menu:not(:checked) + label .iconCheck {
   animation-timing-function: linear;
   animation-fill-mode: both;
 }
-input[type=checkbox]#checkbox_contain_menu:not(:checked) + label .price {
+input[type=checkbox]:not(:checked) + .contain_menu .price {
   animation-name: price_slideOut;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -655,6 +742,7 @@ input[type=checkbox]#checkbox_contain_menu:not(:checked) + label .price {
     transform: translateX(0);
   }
 }
+/*********************** fin test *************************/
 .order {
   display: flex;
   justify-content: center;

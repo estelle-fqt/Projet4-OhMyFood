@@ -59,10 +59,10 @@
               <span class="title">ENTREES</span>
               <div class="underline-title"></div>
               <!-- Syntaxe BEM ?? -->
-              <!-- input contain_menu -->
-              <input type="checkbox" id="checkbox_contain_menu" />
-              <label for="checkbox_contain_menu"
-                ><div class="contain_menu contain_menu1">
+              <!-- input dans le label pour ne pas utiliser d'id et utiliser les mêmes règles css pour ttes les div -->
+              <label>
+                <input type="checkbox" />
+                <div class="contain_menu contain_menu1">
                   <div class="contain_meal">
                     <span class="meal">Fricassée d'escargots</span>
                     <span class="meal_description">Au piment d'Espelette</span>
@@ -72,9 +72,8 @@
                     style="color: #ffffff;"
                   ></i>
                   <span class="price">25€</span>
-                </div></label
-              >
-              <!-- ici input dans le label-->
+                </div>
+              </label>
               <label>
                 <input type="checkbox" />
                 <div class="contain_menu contain_menu2">
@@ -84,91 +83,129 @@
                       >Et ses copeaux de truff noire</span
                     >
                   </div>
+                  <i
+                    class="fa-solid fa-circle-check iconCheck"
+                    style="color: #ffffff;"
+                  ></i>
                   <span class="price">35€</span>
                 </div>
               </label>
-
-              <div class="contain_menu contain_menu3">
-                <div class="contain_meal">
-                  <span class="meal">Oeuf au plat</span>
-                  <span class="meal_description"
-                    >Assaisonné à la truffe sur lit de caviar</span
-                  >
-                </div>
-                <div>
+              <label>
+                <input type="checkbox" />
+                <div class="contain_menu contain_menu3">
+                  <div class="contain_meal">
+                    <span class="meal">Oeuf au plat</span>
+                    <span class="meal_description"
+                      >Assaisonné à la truffe sur lit de caviar</span
+                    >
+                  </div>
+                  <i
+                    class="fa-solid fa-circle-check iconCheck"
+                    style="color: #ffffff;"
+                  ></i>
                   <span class="price">20€</span>
                 </div>
-              </div>
+              </label>
             </div>
             <div class="main_course">
               <span class="title">PLATS</span>
               <div class="underline-title"></div>
-              <div class="contain_menu contain_menu4">
-                <div class="contain_meal">
-                  <span class="meal">Filet de boeuf aux herbes</span>
-                  <span class="meal_description"
-                    >Accompagné de sa ribanbelle de légumes</span
-                  >
-                </div>
-                <div>
+              <label>
+                <input type="checkbox" />
+                <div class="contain_menu contain_menu4">
+                  <div class="contain_meal">
+                    <span class="meal">Filet de boeuf aux herbes</span>
+                    <span class="meal_description"
+                      >Accompagné de sa ribanbelle de légumes</span
+                    >
+                  </div>
+                  <i
+                    class="fa-solid fa-circle-check iconCheck"
+                    style="color: #ffffff;"
+                  ></i>
                   <span class="price">40€</span>
                 </div>
-              </div>
-              <div class="contain_menu contain_menu5">
-                <div class="contain_meal">
-                  <span class="meal">Parmentier de queue de boeuf</span>
-                  <span class="meal_description"
-                    >A la truffe noire sur sa purée de panais</span
-                  >
-                </div>
-                <div>
+              </label>
+              <label>
+                <input type="checkbox" />
+                <div class="contain_menu contain_menu5">
+                  <div class="contain_meal">
+                    <span class="meal">Parmentier de queue de boeuf</span>
+                    <span class="meal_description"
+                      >A la truffe noire sur sa purée de panais</span
+                    >
+                  </div>
+                  <i
+                    class="fa-solid fa-circle-check iconCheck"
+                    style="color: #ffffff;"
+                  ></i>
                   <span class="price">35€</span>
                 </div>
-              </div>
-              <div class="contain_menu contain_menu6">
-                <div class="contain_meal">
-                  <span class="meal">Filet de turbot</span>
-                  <span class="meal_description">Aux agrumes</span>
-                </div>
-                <div>
+              </label>
+              <label>
+                <input type="checkbox" />
+                <div class="contain_menu contain_menu6">
+                  <div class="contain_meal">
+                    <span class="meal">Filet de turbot</span>
+                    <span class="meal_description">Aux agrumes</span>
+                  </div>
+                  <i
+                    class="fa-solid fa-circle-check iconCheck"
+                    style="color: #ffffff;"
+                  ></i>
                   <span class="price">44€</span>
                 </div>
-              </div>
+              </label>
             </div>
             <div class="dessert">
               <span class="title">DESSERT</span>
               <div class="underline-title"></div>
-              <div class="contain_menu contain_menu7">
-                <div class="contain_meal">
-                  <span class="meal">Paris-Brest</span>
-                  <span class="meal_description">Revisité</span>
-                </div>
-                <div>
+              <label>
+                <input type="checkbox" />
+                <div class="contain_menu contain_menu7">
+                  <div class="contain_meal">
+                    <span class="meal">Paris-Brest</span>
+                    <span class="meal_description">Revisité</span>
+                  </div>
+                  <i
+                    class="fa-solid fa-circle-check iconCheck"
+                    style="color: #ffffff;"
+                  ></i>
                   <span class="price">18€</span>
                 </div>
-              </div>
-              <div class="contain_menu contain_menu8">
-                <div class="contain_meal">
-                  <span class="meal">Macaron au chocolat d'exception</span>
-                  <span class="meal_description"
-                    >Et glace à la vanille de Madagascar</span
-                  >
-                </div>
-                <div>
+              </label>
+              <label>
+                <input type="checkbox" />
+                <div class="contain_menu contain_menu8">
+                  <div class="contain_meal">
+                    <span class="meal">Macaron au chocolat d'exception</span>
+                    <span class="meal_description"
+                      >Et glace à la vanille de Madagascar</span
+                    >
+                  </div>
+                  <i
+                    class="fa-solid fa-circle-check iconCheck"
+                    style="color: #ffffff;"
+                  ></i>
                   <span class="price">22€</span>
                 </div>
-              </div>
-              <div class="contain_menu contain_menu9">
-                <div class="contain_meal">
-                  <span class="meal">Mousse au chocolat</span>
-                  <span class="meal_description"
-                    >Au piment d'Espelette et à la truffe noire</span
-                  >
-                </div>
-                <div>
+              </label>
+              <label>
+                <input type="checkbox" />
+                <div class="contain_menu contain_menu9">
+                  <div class="contain_meal">
+                    <span class="meal">Mousse au chocolat</span>
+                    <span class="meal_description"
+                      >Au pimet d'Espelette et à la truffe noire</span
+                    >
+                  </div>
+                  <i
+                    class="fa-solid fa-circle-check iconCheck"
+                    style="color: #ffffff;"
+                  ></i>
                   <span class="price">23€</span>
                 </div>
-              </div>
+              </label>
             </div>
           </div>
           <div class="order">
