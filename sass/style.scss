@@ -24,8 +24,7 @@ $dark-grey: #353535;
 
   .lettre {
     color: $purple;
-    font-size: 50px;
-    letter-spacing: 15px;
+    font-size: 40px;
     animation: flash 1.2s linear infinite;
   }
 }
@@ -191,11 +190,11 @@ button {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: opacity 1000ms;
   &:hover {
     opacity: 0.85;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -216,13 +215,14 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  margin-left: 10px;
 
   .step__contain {
     background-color: #f6f6f6;
     width: 322.49px;
     height: 72.38px;
     border-radius: 20px;
-    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 20px;
+    box-shadow: 0 4px 15px rgba(149, 157, 165, 0.5); /* sur la maquette opacité ombre à 0.1 mais ne donne pas le même rendu */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -264,12 +264,12 @@ a {
 
 .restaurants-cards {
   height: 1058px;
-  margin-left: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
   position: relative;
+  margin-bottom: 61px;
 }
 
 .card {
@@ -344,29 +344,32 @@ a {
   cursor: pointer;
 }
 
-input[type="checkbox"].Heart {
-  display: none;
-}
-
-input[type="checkbox"].Heart:checked + label {
-  content: "";
-  #iconHeartRegular {
-    opacity: 0;
+/* animation clic du coeur */
+.checkboxHeart {
+  input[type="checkbox"] {
+    display: none;
   }
-  #iconHeartSolid {
-    opacity: 1;
-    background: linear-gradient(#9356dc, #ff79da);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+
+  input[type="checkbox"]:checked + .icons_heart {
+    content: "";
+    #iconHeartRegular {
+      opacity: 0;
+    }
+    #iconHeartSolid {
+      opacity: 1;
+      background: linear-gradient(#9356dc, #ff79da);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
   }
 }
 
 footer {
   background-color: $dark-grey;
-  padding: 15px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   p {
@@ -375,6 +378,8 @@ footer {
     font-weight: 400;
     font-size: 18px;
     font-style: italic;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
   a {
     text-decoration: none;
@@ -420,19 +425,21 @@ footer {
   height: 275px;
   object-fit: cover;
   width: 100%;
+  margin-top: 20px;
 }
 
 .menu_restaurants_img {
   z-index: 0;
-  position: absolute;
+  position: relative;
+  /*position: absolute;
   top: 63px;
-  width: 100%;
+  width: 100%;*/
 }
 
 .menu_restaurants_contain {
   border-radius: 30px 30px 0 0;
   z-index: 1;
-  position: absolute;
+  /*position: absolute;*/
   top: 283px;
   width: 100%;
   background-color: $grey-body;
@@ -445,7 +452,11 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  position: relative;
+  /*position: relative;*/
+  position: absolute;
+  top: 255px;
+  background-color: $grey-body;
+  border-radius: 20px 20px 0 0;
 
   h1 {
     font-family: "Shrikhand";
@@ -510,7 +521,6 @@ footer {
     flex-direction: column;
     gap: 7px;
   }
-
   .meal {
     font-size: 18px;
     font-weight: 500;
@@ -518,10 +528,20 @@ footer {
   .meal_description {
     font-size: 15px;
     font-weight: 300;
+    text-overflow: ellipsis;
   }
   .price {
     font-size: 15px;
     font-weight: 700;
+  }
+}
+
+@keyframes hover_meal {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(0.2);
   }
 }
 
@@ -568,103 +588,7 @@ footer {
   animation-delay: 4.5s;
 }
 
-/* Animation réservation plat */
-/*input[type="checkbox"]#checkbox_contain_menu {
-  display: none;
-}
-
-/**** Animation au check ****/
-/*input[type="checkbox"]#checkbox_contain_menu:checked + label {
-  content: "";
-  .iconCheck {
-    width: 59px;
-    height: 100%;
-    background-color: $green-light;
-    border-radius: 0 20px 20px 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    animation-name: meal_reservation;
-    transform-origin: 100% 0%;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-  }
-  .price {
-    transform: translate(-50px);
-    animation-name: price;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-  }
-}
-
-@keyframes meal_reservation {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
-@keyframes price {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(1);
-  }
-}*/
-
-/**** Animation au dé-check ****/
-/*input[type="checkbox"]#checkbox_contain_menu:not(:checked) + label {
-  content: "";
-  .iconCheck {
-    width: 59px;
-    height: 100%;
-    background-color: $green-light;
-    border-radius: 0 20px 20px 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    animation-name: meal_reservation_slideOut;
-    transform-origin: 100% 0%;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-  }
-  .price {
-    animation-name: price_slideOut;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-  }
-}
-
-@keyframes meal_reservation_slideOut {
-  0% {
-    transform: scaleX(1);
-  }
-  100% {
-    transform: scaleX(0);
-  }
-}
-@keyframes price_slideOut {
-  0% {
-    transform: translateX(-50px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}*/
-
-/*********************** test input ds label **************************/
-
+/* animation réservation de plats */
 input[type="checkbox"] {
   display: none;
 }
@@ -708,7 +632,7 @@ input[type="checkbox"]:checked + .contain_menu {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(1);
+    transform: translateX(-50px);
   }
 }
 
@@ -756,7 +680,6 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
     transform: translateX(0);
   }
 }
-/*********************** fin test *************************/
 
 .order {
   display: flex;
@@ -764,16 +687,47 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
   padding-bottom: 47px;
 }
 
-/*media querries index.html*/
+/***************** media querries index.html ***********************/
 
 @media (min-width: 1440px) {
-  /*mettre le logo plus grand*/
+  .navbar {
+    box-shadow: none;
+    height: 96px;
+    img {
+      width: 200px;
+      height: 34.2px;
+    }
+  }
+  .explore {
+    box-shadow: none;
+  }
+  .book {
+    background-color: $grey-body;
+    height: 200px;
+    h1 {
+      width: 645px;
+      height: 47px;
+      margin-top: 30px;
+    }
+    p {
+      width: 531px;
+      height: 46px;
+      margin: 0;
+    }
 
+    button {
+      margin: 0;
+      padding: 0;
+    }
+  }
   .functioning {
     height: 228.38px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    h2 {
+      margin-top: 0;
+    }
   }
   h2 {
     padding: 0;
@@ -784,13 +738,21 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
     justify-content: center;
     gap: 40px;
   }
+  .restaurants {
+    background-color: $grey-body;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    h2 {
+      margin-bottom: 0;
+    }
+  }
   .restaurants-cards {
     height: 608px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px 100px;
-    margin-bottom: 20px;
+    gap: 10px 100px;
+    margin-bottom: 5px;
   }
   .card {
     width: 490px;
@@ -800,15 +762,32 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
     .new {
       left: 395px;
     }
+    #iconHeartRegular {
+      left: 443px;
+    }
+    #iconHeartSolid {
+      left: 443px;
+    }
   }
   footer {
+    height: 114px;
+    padding: 40px;
+    padding-right: 60px;
     flex-direction: row-reverse;
-    justify-content: flex-start;
+    justify-content: baseline;
+    align-items: flex-end;
     gap: 16px;
+    p {
+      margin: 0;
+    }
     .links_footer {
+      width: 661px;
       flex-direction: row;
       align-items: center;
-      gap: 20px;
+      gap: 10px;
+      .link2 {
+        padding-right: 40px;
+      }
     }
     .mentions {
       flex-direction: row;
@@ -822,8 +801,17 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
     background-color: $white;
   }
   .menu_restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .img_restaurants {
+    margin-top: 30px;
+    height: 383px;
+  }
+  .menu_restaurants_contain {
     width: 1055px;
-    margin: 0 192.5px;
-    padding-bottom: 0;
+    height: 1221px;
   }
 }
