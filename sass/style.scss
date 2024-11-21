@@ -497,7 +497,6 @@ footer {
   border-radius: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: flex-end;
   padding: 0 20px 20px 20px;
   cursor: pointer;
@@ -511,6 +510,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    width: 100%; /* pour que l'animation se fasse que devant les intitulés trop long */
   }
   .meal {
     font-size: 18px;
@@ -519,20 +519,14 @@ footer {
   .meal_description {
     font-size: 15px;
     font-weight: 300;
-    text-overflow: ellipsis;
   }
   .price {
     font-size: 15px;
     font-weight: 700;
-  }
-}
-
-@keyframes hover_meal {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(0.2);
+    position: absolute; /* .contain_menu parent pour enlever le space between pour l'animation */
+    right: 15px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -608,6 +602,28 @@ input[type="checkbox"]:checked + .contain_menu {
     animation-duration: 0.5s;
     animation-timing-function: linear;
   }
+  .meal {
+    animation-name: overflow_meal_description;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform-origin: 0;
+    transition-duration: 0.5s;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 75%;
+  }
+  .meal_description {
+    animation-name: overflow_meal_description;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform-origin: 0;
+    transition-duration: 0.5s;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 75%;
+  }
 }
 
 @keyframes meal_reservation {
@@ -626,9 +642,16 @@ input[type="checkbox"]:checked + .contain_menu {
     transform: translateX(-50px);
   }
 }
+@keyframes overflow_meal_description {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0.9);
+  }
+}
 
 /* Animation au dé-check */
-
 input[type="checkbox"]:not(:checked) + .contain_menu {
   .iconCheck {
     width: 59px;
@@ -653,6 +676,28 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
     animation-duration: 0.5s;
     animation-timing-function: linear;
   }
+  .meal {
+    animation-name: overflow_meal_description;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform-origin: 0;
+    transition-duration: 0.5s;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  .meal_description {
+    animation-name: overflow_meal_description;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform-origin: 0;
+    transition-duration: 1s;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
 }
 
 @keyframes meal_reservation_slideOut {
@@ -669,6 +714,14 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
   }
   100% {
     transform: translateX(0);
+  }
+}
+@keyframes overflow_meal_description {
+  0% {
+    transform: scaleX(0.9);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }
 
