@@ -426,8 +426,6 @@ footer i {
   top: 283px;
   width: 100%;
   background-color: #f6f6f6;
-  /*position: absolute; pb = le footer disparait
-  /* pour superposer le tire sur l'img */
 }
 
 .header_menu {
@@ -437,11 +435,10 @@ footer i {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  top: 255px;
   background-color: #f6f6f6;
   border-radius: 20px 20px 0 0;
-  position: absolute;
-  /* pb = superposition avec .menu_restaurants donc "ENTREE" disparait */
+  position: absolute; /* élément parent: .img_restaurants */
+  top: 235px;
 }
 .header_menu h1 {
   font-family: "Shrikhand";
