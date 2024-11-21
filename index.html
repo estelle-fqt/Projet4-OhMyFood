@@ -53,11 +53,14 @@
         <p>
           Découvrez des restaurants d'exception, sélectionnés par nos soins.
         </p>
-        <a href="#restaurants">
-          <button>
-            Explorer nos restaurants
-          </button>
-        </a>
+        <form action="#restaurants">
+          <!-- utiliser <form> et non <a> pour passer au validteur -->
+          <div>
+            <button>
+              Explorer nos restaurants
+            </button>
+          </div>
+        </form>
       </div>
       <section class="functioning">
         <h2>Fonctionnement</h2>
@@ -92,132 +95,127 @@
       <section class="restaurants" id="restaurants">
         <h2>Restaurants</h2>
         <div class="restaurants-cards">
-          <a href="LaPaletteDuGoût.html">
-            <article class="card">
-              <div class="new">
-                <p>Nouveau</p>
-              </div>
-              <img
-                src="dossier-assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                alt="image d'un plat"
-              />
-              <div class="description">
-                <div class="who-where">
-                  <h3>La palette du goût</h3>
-                  <p>Ménilmontant</p>
+          <div class="card_contain">
+            <a href="LaPaletteDuGoût.html">
+              <article class="card">
+                <div class="new">
+                  <p>Nouveau</p>
                 </div>
-                <div class="checkboxHeart">
-                  <label>
-                    <input type="checkbox" />
-                    <div class="icons_heart">
-                      <i
-                        class="fa-regular fa-heart iconHeartRegular"
-                        id="iconHeartRegular"
-                        style="color: #101010;"
-                      ></i>
-                      <i
-                        class="fa-solid fa-heart iconHeartSolid"
-                        id="iconHeartSolid"
-                      ></i>
-                    </div>
-                  </label>
+                <img
+                  src="dossier-assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                  alt="image d'un plat"
+                />
+                <div class="description">
+                  <div class="who-where">
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-          </a>
-          <a href="LaNoteEnchantée.html">
-            <article class="card">
-              <div class="new">
-                <p>Nouveau</p>
-              </div>
-              <img
-                src="dossier-assets/stil-u2Lp8tXIcjw-unsplash.jpg"
-                alt="image d'un plat"
-              />
-              <div class="description">
-                <div class="who-where">
-                  <h3>La note enchantée</h3>
-                  <p>Charonne</p>
+              </article>
+            </a>
+            <div class="checkboxHeart">
+              <label>
+                <input type="checkbox" />
+                <span class="icons_heart">
+                  <i
+                    class="fa-regular fa-heart iconHeartRegular"
+                    style="color: #101010;"
+                  ></i>
+                  <i
+                    class="fa-solid fa-heart iconHeartSolid"
+                    id="iconHeartSolid"
+                  ></i>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="card_contain">
+            <a href="LaNoteEnchantée.html">
+              <article class="card">
+                <div class="new">
+                  <p>Nouveau</p>
                 </div>
-                <div class="checkboxHeart">
-                  <label>
-                    <input type="checkbox" />
-                    <div class="icons_heart">
-                      <i
-                        class="fa-regular fa-heart iconHeartRegular"
-                        id="iconHeartRegular"
-                        style="color: #101010;"
-                      ></i>
-                      <i
-                        class="fa-solid fa-heart iconHeartSolid"
-                        id="iconHeartSolid"
-                      ></i>
-                    </div>
-                  </label>
+                <img
+                  src="dossier-assets/stil-u2Lp8tXIcjw-unsplash.jpg"
+                  alt="image d'un plat"
+                />
+                <div class="description">
+                  <div class="who-where">
+                    <h3>La note enchantée</h3>
+                    <p>Charonne</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-          </a>
-          <a href="ALaFrançaise.html">
-            <article class="card">
-              <img
-                src="dossier-assets/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                alt="image d'un plat"
-              />
-              <div class="description">
-                <div class="who-where">
-                  <h3>A la française</h3>
-                  <p>Cité Rouge</p>
+              </article>
+            </a>
+            <div class="checkboxHeart">
+              <label>
+                <input type="checkbox" />
+                <span class="icons_heart">
+                  <i
+                    class="fa-regular fa-heart iconHeartRegular"
+                    style="color: #101010;"
+                  ></i>
+                  <i class="fa-solid fa-heart iconHeartSolid"></i>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="card_contain">
+            <a href="ALaFrançaise.html">
+              <article class="card">
+                <img
+                  src="dossier-assets/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                  alt="image d'un plat"
+                />
+                <div class="description">
+                  <div class="who-where">
+                    <h3>A la française</h3>
+                    <p>Cité Rouge</p>
+                  </div>
                 </div>
-                <div class="checkboxHeart">
-                  <label>
-                    <input type="checkbox" />
-                    <div class="icons_heart">
-                      <i
-                        class="fa-regular fa-heart iconHeartRegular"
-                        id="iconHeartRegular"
-                        style="color: #101010;"
-                      ></i>
-                      <i
-                        class="fa-solid fa-heart iconHeartSolid"
-                        id="iconHeartSolid"
-                      ></i>
-                    </div>
-                  </label>
+              </article>
+            </a>
+            <div class="checkboxHeart">
+              <label>
+                <input type="checkbox" />
+                <span class="icons_heart">
+                  <i
+                    class="fa-regular fa-heart iconHeartRegular"
+                    style="color: #101010;"
+                  ></i>
+                  <i class="fa-solid fa-heart iconHeartSolid"></i>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="card_contain">
+            <a href="LeDéliceDesSens.html">
+              <article class="card">
+                <img
+                  src="dossier-assets/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                  alt="image d'un plat"
+                />
+                <div class="description">
+                  <div class="who-where">
+                    <h3>Le délice des sens</h3>
+                    <p>Folie-Méricourt</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-          </a>
-          <a href="LeDéliceDesSens.html">
-            <article class="card">
-              <img
-                src="dossier-assets/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                alt="image d'un plat"
-              />
-              <div class="description">
-                <div class="who-where">
-                  <h3>Le délice des sens</h3>
-                  <p>Folie-Méricourt</p>
-                </div>
-                <div class="checkboxHeart">
-                  <label>
-                    <input type="checkbox" />
-                    <div class="icons_heart">
-                      <i
-                        class="fa-regular fa-heart iconHeartRegular"
-                        id="iconHeartRegular"
-                        style="color: #101010;"
-                      ></i>
-                      <i
-                        class="fa-solid fa-heart iconHeartSolid"
-                        id="iconHeartSolid"
-                      ></i>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </article>
-          </a>
+              </article>
+            </a>
+            <div class="checkboxHeart">
+              <label>
+                <input type="checkbox" />
+                <span class="icons_heart">
+                  <i
+                    class="fa-regular fa-heart iconHeartRegular"
+                    style="color: #101010;"
+                  ></i>
+                  <i class="fa-solid fa-heart iconHeartSolid"></i>
+                </span>
+              </label>
+            </div>
+          </div>
         </div>
       </section>
     </main>
