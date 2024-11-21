@@ -31,26 +31,33 @@
       </div>
     </header>
     <main>
+      <!-- div normalement sous la section class="menu_restaurants"-->
+      <div class="menu_restaurants_img">
+        <img
+          class="img_restaurants"
+          src="dossier-assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+          alt="image d'un plat"
+        />
+      </div>
+      <!------------------------------------------------------------>
       <section class="menu_restaurants">
-        <div class="menu_restaurants_img">
-          <img
-            class="img_restaurants"
-            src="dossier-assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-            alt="image d'un plat"
-          />
-        </div>
         <div class="menu_restaurants_contain">
           <div class="header_menu">
             <h1>La palette du goût</h1>
             <div class="checkboxHeart">
-              <input type="checkbox" id="Heart" class="Heart" />
-              <label for="Heart">
-                <i
-                  class="fa-regular fa-heart"
-                  id="iconHeartRegular"
-                  style="color: #101010;"
-                ></i>
-                <i class="fa-solid fa-heart" id="iconHeartSolid"></i>
+              <label>
+                <input type="checkbox" />
+                <div class="icons_heart">
+                  <i
+                    class="fa-regular fa-heart iconHeartRegular"
+                    id="iconHeartRegular"
+                    style="color: #101010;"
+                  ></i>
+                  <i
+                    class="fa-solid fa-heart iconHeartSolid"
+                    id="iconHeartSolid"
+                  ></i>
+                </div>
               </label>
             </div>
           </div>

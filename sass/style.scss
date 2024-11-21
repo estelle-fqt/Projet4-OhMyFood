@@ -425,24 +425,15 @@ footer {
   height: 275px;
   object-fit: cover;
   width: 100%;
-  margin-top: 20px;
-}
-
-.menu_restaurants_img {
-  z-index: 0;
-  position: relative;
-  /*position: absolute;
-  top: 63px;
-  width: 100%;*/
 }
 
 .menu_restaurants_contain {
   border-radius: 30px 30px 0 0;
-  z-index: 1;
-  /*position: absolute;*/
   top: 283px;
   width: 100%;
   background-color: $grey-body;
+  /*position: absolute; pb = le footer disparait
+  /* pour superposer le tire sur l'img */
 }
 
 .header_menu {
@@ -452,11 +443,11 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  /*position: relative;*/
-  position: absolute;
   top: 255px;
   background-color: $grey-body;
   border-radius: 20px 20px 0 0;
+  position: absolute;
+  /* pb = superposition avec .menu_restaurants donc "ENTREE" disparait */
 
   h1 {
     font-family: "Shrikhand";
@@ -466,12 +457,12 @@ footer {
   }
 
   #iconHeartRegular {
-    top: 36%;
+    top: 32px;
     left: auto;
   }
 
   #iconHeartSolid {
-    top: 36%;
+    top: 32px;
     left: auto;
   }
 }
@@ -488,7 +479,6 @@ footer {
     font-size: 16px;
     font-weight: 300;
     margin-left: 10px;
-    position: relative;
   }
   .underline-title {
     position: absolute;
@@ -800,18 +790,33 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
   body {
     background-color: $white;
   }
+
   .menu_restaurants {
-    display: flex;
+    width: 1055px;
+    /*display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: center;*/
+    margin-left: 193px;
+    margin-right: 193px;
   }
   .img_restaurants {
-    margin-top: 30px;
     height: 383px;
+    width: 100%;
+    margin-top: 0;
+    object-fit: cover;
+    /*position: relative;*/
   }
+
   .menu_restaurants_contain {
     width: 1055px;
-    height: 1221px;
+    .header_menu {
+      position: initial;
+      #iconHeartRegular {
+        position: initial;
+      }
+      #iconHeartSolid {
+        position: initial;
+      }
+    }
   }
 }
