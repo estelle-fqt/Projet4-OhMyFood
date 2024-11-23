@@ -102,7 +102,8 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  position: relative;
+  /*margin-bottom: 20px;*/
+  /*position: relative;*/
 }
 
 .navbar {
@@ -275,9 +276,10 @@ a {
 }
 .card img {
   width: 340px;
-  height: 160px;
+  height: 175px;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
+  object-position: bottom;
 }
 .card .new {
   position: absolute;
@@ -294,10 +296,13 @@ a {
   font-size: 14px;
   font-weight: 500;
 }
+.card .card2 {
+  object-position: 50% 62%;
+}
 
 .description {
   position: relative;
-  margin-top: 20px;
+  margin-top: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -328,7 +333,7 @@ a {
   opacity: 0;
   position: absolute;
   right: 30px;
-  bottom: 35px;
+  bottom: 30px;
   font-size: x-large;
   cursor: pointer;
 }
@@ -337,7 +342,7 @@ a {
 .iconHeartRegular {
   position: absolute;
   right: 30px;
-  bottom: 35px;
+  bottom: 30px;
   font-size: x-large;
   cursor: pointer;
 }
@@ -366,6 +371,7 @@ footer {
   background-color: #353535;
   padding: 20px;
   display: flex;
+  margin-top: 40px;
   flex-direction: column;
 }
 footer p {
@@ -398,7 +404,7 @@ footer i {
   margin-right: 10px;
 }
 
-/*Style scss Pages restaurants*/
+/************************ Style scss Pages restaurants ******************************************/
 .fa-arrow-left {
   position: absolute;
   top: 16.5px;
@@ -419,13 +425,15 @@ footer i {
   height: 275px;
   object-fit: cover;
   width: 100%;
+  margin-top: 20px;
 }
 
 .menu_restaurants_contain {
-  border-radius: 30px 30px 0 0;
-  top: 283px;
+  /*border-radius: 30px 30px 0 0;*/
+  top: 40px;
   width: 100%;
   background-color: #f6f6f6;
+  position: relative;
 }
 
 .header_menu {
@@ -436,9 +444,9 @@ footer i {
   align-items: center;
   gap: 20px;
   background-color: #f6f6f6;
-  border-radius: 20px 20px 0 0;
+  border-radius: 45px 45px 0 0;
   position: absolute; /* élément parent: .img_restaurants */
-  top: 235px;
+  top: 280px;
 }
 .header_menu h1 {
   font-family: "Shrikhand";
@@ -446,15 +454,16 @@ footer i {
   font-weight: 400;
   font-size: 28px;
   margin-left: 15px;
+  margin-top: 35px;
 }
 .header_menu .iconHeartRegular {
-  top: 32px;
-  left: auto;
+  top: 43px;
+  left: 83%;
   bottom: auto;
 }
 .header_menu .iconHeartSolid {
-  top: 32px;
-  left: auto;
+  top: 43px;
+  left: 83%;
   bottom: auto;
 }
 
@@ -476,6 +485,12 @@ footer i {
   height: 3px;
   background-color: #99e2d0;
   margin-left: 10px;
+}
+.menu .main_course {
+  margin-top: 30px;
+}
+.menu .dessert {
+  margin-top: 30px;
 }
 
 .contain_menu {
@@ -791,9 +806,13 @@ input[type=checkbox]:not(:checked) + .contain_menu .meal_description {
   }
   .card img {
     width: 490px;
+    object-position: 50% 68%;
+  }
+  .card .card2 {
+    object-position: 50% 57%;
   }
   .card .new {
-    left: 395px;
+    left: 390px;
   }
   .card #iconHeartRegular {
     left: 443px;
@@ -809,6 +828,7 @@ input[type=checkbox]:not(:checked) + .contain_menu .meal_description {
     justify-content: baseline;
     align-items: flex-end;
     gap: 16px;
+    margin-top: 0;
   }
   footer p {
     margin: 0;
@@ -830,32 +850,61 @@ input[type=checkbox]:not(:checked) + .contain_menu .meal_description {
   body {
     background-color: #ffffff;
   }
+  .fa-arrow-left {
+    top: 34px;
+  }
   .menu_restaurants {
-    width: 1055px;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;*/
-    margin-left: 193px;
-    margin-right: 193px;
+    width: 100%;
+    background-color: #ffffff;
   }
   .img_restaurants {
     height: 383px;
     width: 100%;
-    margin-top: 0;
+    margin-top: 20px;
     object-fit: cover;
-    /*position: relative;*/
+    object-position: 50% 56%;
+  }
+  .header_menu {
+    width: 1055px;
+    height: 115px;
+    top: 445px;
+    margin-left: 193px;
+    margin-right: 193px;
+    justify-content: center;
+  }
+  .header_menu .iconHeartRegular {
+    /*position: initial;*/
+    left: 65%;
+    top: 52px;
+  }
+  .header_menu .iconHeartSolid {
+    /*position: initial;*/
+    left: 65%;
+    top: 52px;
   }
   .menu_restaurants_contain {
     width: 1055px;
+    margin-left: 193px;
+    margin-right: 193px;
+    top: 77px;
   }
-  .menu_restaurants_contain .header_menu {
-    position: initial;
+  .menu_restaurants_contain .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .menu_restaurants_contain .header_menu #iconHeartRegular {
-    position: initial;
+  .menu_restaurants_contain .starter {
+    width: 634px;
   }
-  .menu_restaurants_contain .header_menu #iconHeartSolid {
-    position: initial;
+  .menu_restaurants_contain .main_course {
+    width: 634px;
+  }
+  .menu_restaurants_contain .dessert {
+    width: 634px;
+  }
+  .footer {
+    margin-top: 77px;
   }
 }
 
