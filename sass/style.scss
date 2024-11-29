@@ -8,7 +8,8 @@ $white: #ffffff;
 $grey-body: #f6f6f6;
 $dark-grey: #353535;
 
-/* Animation Loader HomePage */
+/************* Animation Loader HomePage ************/
+/****************************************************/
 .loader {
   position: fixed;
   width: 100%;
@@ -25,6 +26,7 @@ $dark-grey: #353535;
   .lettre {
     color: $purple;
     font-size: 40px;
+    /*animation: name duration timing-function delay iteration-count direction fill-mode play-state*/
     animation: flash 1.2s linear infinite;
   }
 }
@@ -39,7 +41,7 @@ $dark-grey: #353535;
   }
   100% {
     opacity: 0;
-    display: none; /* pour que le loader ne reste pas en position: fixed; ce qui bloque les interactions*/
+    display: none; /* pour que le loader ne reste pas en position: fixed; ce qui bloque les interactions sur la page*/
   }
 }
 
@@ -105,8 +107,6 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  /*margin-bottom: 20px;*/
-  /*position: relative;*/
 }
 
 .navbar {
@@ -339,7 +339,7 @@ a {
 .iconHeartSolid {
   opacity: 0;
   position: absolute;
-  right: 30px;
+  right: 31px;
   bottom: 30px;
   font-size: x-large;
   cursor: pointer;
@@ -347,13 +347,14 @@ a {
 /* coeur avec bordure plus fines = icone payante sur Font Awesome*/
 .iconHeartRegular {
   position: absolute;
-  right: 30px;
+  right: 31px;
   bottom: 30px;
   font-size: x-large;
   cursor: pointer;
 }
 
-/* animation clic du coeur */
+/************* animation clic du coeur ***************/
+/*****************************************************/
 .checkboxHeart {
   input[type="checkbox"] {
     display: none;
@@ -439,7 +440,6 @@ footer {
 }
 
 .menu_restaurants_contain {
-  /*border-radius: 30px 30px 0 0;*/
   top: 40px;
   width: 100%;
   background-color: $grey-body;
@@ -519,7 +519,8 @@ footer {
   padding: 0 20px 20px 20px;
   cursor: pointer;
   position: relative;
-  /* animation apparition des plats */
+  /************* animation apparition des plats *************/
+  /**********************************************************/
   animation: appearance 5s;
   transform-origin: 0% 0%;
   /*********************************/
@@ -548,7 +549,8 @@ footer {
   }
 }
 
-/* Animation apparition plats */
+/*************** Animation apparition plats ****************/
+/***********************************************************/
 @keyframes appearance {
   0% {
     opacity: 0;
@@ -591,7 +593,8 @@ footer {
   animation-delay: 4.5s;
 }
 
-/* animation réservation de plats */
+/************** animation réservation de plats ******************/
+/****************************************************************/
 input[type="checkbox"] {
   display: none;
 }
@@ -751,7 +754,7 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
 
 /***************** media querries index.html ***********************/
 
-@media (min-width: 1440px) {
+@media (min-width: 1025px) {
   .navbar {
     box-shadow: none;
     height: 96px;

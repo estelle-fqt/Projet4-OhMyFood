@@ -1,3 +1,3 @@
-# Projet4-OhMyFood
+# OhMyFood
 
-Projet 4 d'OpenClassrooms OhMyFood
+EXPLICATION DU SITE
