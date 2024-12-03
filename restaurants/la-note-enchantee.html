@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oh my food</title>
-    <link rel="stylesheet" href="style.scss" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../sass/style.scss" />
+    <link rel="stylesheet" href="../style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -24,10 +24,10 @@
   <body>
     <header>
       <div class="navbar">
-        <a href="index.html">
+        <a href="../index.html">
           <i class="fa fa-arrow-left" aria-hidden="true"></i>
         </a>
-        <img src="assets/ohmyfood.png" alt="Logo OhMyFood" />
+        <img src="../assets/ohmyfood.png" alt="Logo OhMyFood" />
       </div>
     </header>
     <main>
@@ -36,12 +36,12 @@
           <div class="menu_restaurants_img">
             <img
               class="img_restaurants"
-              src="assets/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+              src="../assets/stil-u2Lp8tXIcjw-unsplash.jpg"
               alt="image d'un plat"
             />
           </div>
           <div class="header_menu">
-            <h1>Le délice des sens</h1>
+            <h1>La note enchantée</h1>
             <div class="checkboxHeart">
               <label>
                 <input type="checkbox" />
@@ -65,8 +65,10 @@
                 <input type="checkbox" />
                 <span class="contain_menu contain_menu1">
                   <span class="contain_meal">
-                    <span class="meal">Tartare de thon</span>
-                    <span class="meal_description">Assaisonné au yuzu</span>
+                    <span class="meal">Ravioles de foie gras</span>
+                    <span class="meal_description"
+                      >Accompagnées de leur crème à la truffe</span
+                    >
                   </span>
                   <i
                     class="fa-solid fa-circle-check iconCheck"
@@ -79,9 +81,9 @@
                 <input type="checkbox" />
                 <span class="contain_menu contain_menu2">
                   <span class="contain_meal">
-                    <span class="meal">Bouchée de homard croustillant</span>
+                    <span class="meal">Caviar osciètre</span>
                     <span class="meal_description"
-                      >Et sa farandole de petits légumes</span
+                      >Sur blini à la farine de blé noir</span
                     >
                   </span>
                   <i
@@ -95,14 +97,32 @@
                 <input type="checkbox" />
                 <span class="contain_menu contain_menu3">
                   <span class="contain_meal">
-                    <span class="meal">Poulet rôti aux herbes de Provence</span>
-                    <span class="meal_description">Et sa crème de truffe</span>
+                    <span class="meal">Homard et espuma de potiron</span>
+                    <span class="meal_description"
+                      >Marinés aux zestes d'orange</span
+                    >
                   </span>
                   <i
                     class="fa-solid fa-circle-check iconCheck"
                     style="color: #ffffff;"
                   ></i>
-                  <span class="price">40€</span>
+                  <span class="price">20€</span>
+                </span>
+              </label>
+              <label>
+                <input type="checkbox" />
+                <span class="contain_menu contain_menu4">
+                  <span class="contain_meal">
+                    <span class="meal">Foie gras de canard cuit entier</span>
+                    <span class="meal_description"
+                      >Confiture de figue et pain toasté</span
+                    >
+                  </span>
+                  <i
+                    class="fa-solid fa-circle-check iconCheck"
+                    style="color: #ffffff;"
+                  ></i>
+                  <span class="price">35€</span>
                 </span>
               </label>
             </div>
@@ -111,10 +131,12 @@
               <div class="underline-title"></div>
               <label>
                 <input type="checkbox" />
-                <span class="contain_menu contain_menu4">
+                <span class="contain_menu contain_menu5">
                   <span class="contain_meal">
-                    <span class="meal">Poulet rôti aux herbes de Provence</span>
-                    <span class="meal_description">Et sa crème de truffe</span>
+                    <span class="meal">Noix de coquilles Sain-jacques</span>
+                    <span class="meal_description"
+                      >Sur lit de purée de céleri-rave</span
+                    >
                   </span>
                   <i
                     class="fa-solid fa-circle-check iconCheck"
@@ -125,12 +147,10 @@
               </label>
               <label>
                 <input type="checkbox" />
-                <span class="contain_menu contain_menu5">
+                <span class="contain_menu contain_menu6">
                   <span class="contain_meal">
-                    <span class="meal">Langouste rôtie</span>
-                    <span class="meal_description"
-                      >Et ses légumes de saison</span
-                    >
+                    <span class="meal">Langoustine poêlée</span>
+                    <span class="meal_description">Purée de patate douce</span>
                   </span>
                   <i
                     class="fa-solid fa-circle-check iconCheck"
@@ -141,16 +161,18 @@
               </label>
               <label>
                 <input type="checkbox" />
-                <span class="contain_menu contain_menu6">
+                <span class="contain_menu contain_menu7">
                   <span class="contain_meal">
-                    <span class="meal">Côte de boeuf Angus</span>
-                    <span class="meal_description">Et sa purée de panais</span>
+                    <span class="meal">Mijoté de queue de boeuf</span>
+                    <span class="meal_description"
+                      >Et riz sauvage aux zestes de citron</span
+                    >
                   </span>
                   <i
                     class="fa-solid fa-circle-check iconCheck"
                     style="color: #ffffff;"
                   ></i>
-                  <span class="price">44€</span>
+                  <span class="price">45€</span>
                 </span>
               </label>
             </div>
@@ -159,10 +181,12 @@
               <div class="underline-title"></div>
               <label>
                 <input type="checkbox" />
-                <span class="contain_menu contain_menu7">
+                <span class="contain_menu contain_menu8">
                   <span class="contain_meal">
-                    <span class="meal">Farandole de dessers</span>
-                    <span class="meal_description">Du chef</span>
+                    <span class="meal">Macaron noisette et chocolat</span>
+                    <span class="meal_description"
+                      >Glace au caramel brun et sel de Guérande</span
+                    >
                   </span>
                   <i
                     class="fa-solid fa-circle-check iconCheck"
@@ -173,10 +197,12 @@
               </label>
               <label>
                 <input type="checkbox" />
-                <span class="contain_menu contain_menu8">
+                <span class="contain_menu contain_menu9">
                   <span class="contain_meal">
-                    <span class="meal">Crème brulée</span>
-                    <span class="meal_description">Revisitée</span>
+                    <span class="meal">Baba au rhum revisité</span>
+                    <span class="meal_description"
+                      >Avec son coulis de citron</span
+                    >
                   </span>
                   <i
                     class="fa-solid fa-circle-check iconCheck"
@@ -187,10 +213,10 @@
               </label>
               <label>
                 <input type="checkbox" />
-                <span class="contain_menu contain_menu9">
+                <span class="contain_menu contain_menu10">
                   <span class="contain_meal">
-                    <span class="meal">Tiramisu</span>
-                    <span class="meal_description">A la noisette</span>
+                    <span class="meal">Tarte au citron meringuée</span>
+                    <span class="meal_description">Déstructurée</span>
                   </span>
                   <i
                     class="fa-solid fa-circle-check iconCheck"
