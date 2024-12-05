@@ -462,20 +462,24 @@ footer {
   }
 }
 
+.menu_restaurants {
+  /*margin-top: -20px;*/
+  top: 300px;
+  background-color: $grey-body;
+}
+
 .img_header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.menu_restaurants_img {
+  width: 100%;
+}
 .img_restaurants {
   height: 275px;
   object-fit: cover;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.menu_restaurants_img {
   width: 100%;
 }
 
@@ -483,7 +487,6 @@ footer {
   top: 40px;
   width: 100%;
   background-color: $grey-body;
-  position: relative;
 }
 
 .header_menu {
@@ -518,12 +521,6 @@ footer {
     left: 83%;
     bottom: auto;
   }
-}
-
-.menu_restaurants {
-  margin-top: -20px;
-  top: 300px;
-  background-color: $grey-body;
 }
 
 .menu {
@@ -837,7 +834,6 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
   }
 
   .functioning {
-    border: solid red;
     width: 100%;
     height: 228.38px;
     width: fit-content;
@@ -850,7 +846,7 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
   .steps {
     flex-direction: row;
     padding-left: 10px;
-    gap: 25px;
+    gap: 35px;
   }
 
   .restaurants {
@@ -928,7 +924,6 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
   .img_restaurants {
     height: 383px;
     width: 100%;
-    margin-top: 20px;
     object-fit: cover;
     object-position: 50% 56%;
   }
@@ -950,6 +945,7 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
   }
 
   .menu_restaurants_contain {
+    position: relative;
     width: 1055px;
     margin: auto;
     top: 77px;
