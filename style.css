@@ -17,7 +17,6 @@
 }
 
 .menu_restaurants {
-  /*margin-top: -20px;*/
   top: 300px;
   background-color: #f6f6f6;
 }
@@ -38,12 +37,6 @@
   width: 100%;
 }
 
-.menu_restaurants_contain {
-  top: 40px;
-  width: 100%;
-  background-color: #f6f6f6;
-}
-
 .header_menu {
   width: 100%;
   display: flex;
@@ -53,7 +46,7 @@
   gap: 20px;
   background-color: #f6f6f6;
   border-radius: 45px 45px 0 0;
-  position: absolute; /* élément parent: .img_restaurants */
+  position: absolute;
   top: 280px;
 }
 .header_menu h1 {
@@ -73,6 +66,12 @@
   top: 43px;
   left: 83%;
   bottom: auto;
+}
+
+.menu_restaurants_contain {
+  top: 40px;
+  width: 100%;
+  background-color: #f6f6f6;
 }
 
 .menu .title {
@@ -106,17 +105,14 @@
   padding: 0 20px 20px 20px;
   cursor: pointer;
   position: relative;
-  /************* animation apparition des plats *************/
-  /**********************************************************/
   animation: appearance 5s;
   transform-origin: 0% 0%;
-  /*********************************/
 }
 .contain_menu .contain_meal {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  width: 100%; /* pour que l'animation se fasse que devant les intitulés trop long */
+  width: 100%;
 }
 .contain_menu .meal {
   font-size: 18px;
@@ -129,7 +125,7 @@
 .contain_menu .price {
   font-size: 15px;
   font-weight: 700;
-  position: absolute; /* .contain_menu parent pour enlever le space between pour l'animation */
+  position: absolute;
   right: 15px;
   margin: 0;
   padding: 0;
@@ -193,7 +189,6 @@ input[type=checkbox] {
   display: none;
 }
 
-/* animation au check */
 input[type=checkbox]:checked + .contain_menu .iconCheck {
   width: 59px;
   height: 100%;
@@ -264,7 +259,6 @@ input[type=checkbox]:checked + .contain_menu .meal_description {
     transform: scaleX(0.9);
   }
 }
-/* Animation au dé-check */
 input[type=checkbox]:not(:checked) + .contain_menu .iconCheck {
   width: 59px;
   height: 100%;
@@ -400,6 +394,15 @@ input[type=checkbox]:not(:checked) + .contain_menu .meal_description {
   }
 }
 /*Variables*/
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+}
+
 /************* Animation Loader HomePage ************/
 /****************************************************/
 .loader {
@@ -418,12 +421,10 @@ input[type=checkbox]:not(:checked) + .contain_menu .meal_description {
 .loader .lettre {
   color: #9356dc;
   font-size: 40px;
-  /*animation: name duration timing-function delay iteration-count direction fill-mode play-state*/
   animation: flash 1.2s linear infinite;
 }
 
 @keyframes loader {
-  /* animation du chargement de la page */
   0% {
     opacity: 1;
   }
@@ -432,11 +433,10 @@ input[type=checkbox]:not(:checked) + .contain_menu .meal_description {
   }
   100% {
     opacity: 0;
-    visibility: hidden; /* pour que le loader ne reste pas en position: fixed; ce qui bloque les interactions sur la page*/
+    visibility: hidden;
   }
 }
 @keyframes flash {
-  /* animation du loader */
   0% {
     color: #99e2d0;
     text-shadow: 0 0 7px #99e2d0;
@@ -450,9 +450,7 @@ input[type=checkbox]:not(:checked) + .contain_menu .meal_description {
     text-shadow: 0 0 7px #99e2d0;
   }
 }
-/* effet de décalage sur chaque lettre */
 .lettre:nth-child(1) {
-  /* sélection du premier enfant (i-e première lettre)*/
   animation-delay: 0.1s;
 }
 
@@ -492,15 +490,6 @@ input[type=checkbox]:not(:checked) + .contain_menu .meal_description {
   animation-delay: 1s;
 }
 
-* {
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  background-color: #ffffff;
-  margin: 0;
-}
-
 header {
   display: flex;
   flex-direction: column;
@@ -527,6 +516,11 @@ header {
   justify-content: center;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
+.explore i {
+  width: 12px;
+  height: 16px;
+  color: #353535;
+}
 .explore input {
   border: none;
   background-color: #eaeaea;
@@ -540,11 +534,6 @@ header {
 }
 .explore input:focus {
   outline: none;
-}
-.explore i {
-  width: 12px;
-  height: 16px;
-  color: #353535;
 }
 
 .book {
@@ -611,13 +600,6 @@ button:hover {
   margin-left: -10px;
 }
 
-.title_restaurants {
-  padding-top: 48px;
-  padding-bottom: 26px;
-  margin: 0;
-  font-size: 24px;
-}
-
 .steps {
   margin-top: 0;
   display: flex;
@@ -625,12 +607,18 @@ button:hover {
   align-items: center;
   gap: 25px;
 }
+.steps .step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
 .steps .step__contain {
   background-color: #f6f6f6;
   width: 322.49px;
   height: 72.38px;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(149, 157, 165, 0.5); /* sur la maquette opacité ombre à 0.1 mais ne donne pas le même rendu */
+  box-shadow: 0 4px 15px rgba(149, 157, 165, 0.5);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -638,12 +626,6 @@ button:hover {
 .steps i {
   padding-left: 35px;
   padding-right: 18px;
-}
-.steps .step {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: relative;
 }
 .steps p {
   font-size: 16px;
@@ -665,18 +647,12 @@ button:hover {
   align-items: center;
 }
 
-a {
-  text-decoration: none;
-}
-
 .restaurants {
   background-color: #f6f6f6;
-  /*****/
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Permet aux éléments de se déplacer sur plusieurs lignes si nécessaire */
-  /*****/
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -685,7 +661,13 @@ a {
   flex-direction: column;
   align-items: baseline;
   margin: 0 auto;
-  /*width: fit-content;*/
+}
+
+.title_restaurants {
+  padding-top: 48px;
+  padding-bottom: 26px;
+  margin: 0;
+  font-size: 24px;
 }
 
 .restaurants-cards {
@@ -698,19 +680,20 @@ a {
   padding-bottom: 60px;
 }
 
+.card_contain {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
 .card {
   width: 340px;
   height: 251px;
   border-radius: 15px;
   background-color: #ffffff;
   position: relative;
-}
-.card img {
-  width: 340px;
-  height: 175px;
-  border-radius: 15px 15px 0 0;
-  object-fit: cover;
-  object-position: bottom;
 }
 .card .new {
   position: absolute;
@@ -726,6 +709,13 @@ a {
   border-radius: 2px;
   font-size: 14px;
   font-weight: 500;
+}
+.card img {
+  width: 340px;
+  height: 175px;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  object-position: bottom;
 }
 .card .card2 {
   object-position: 50% 62%;
@@ -756,10 +746,6 @@ a {
   font-weight: 300;
 }
 
-.card_contain {
-  position: relative;
-}
-
 .iconHeartSolid {
   opacity: 0;
   position: absolute;
@@ -769,7 +755,6 @@ a {
   cursor: pointer;
 }
 
-/* coeur avec bordure plus fines = icone payante sur Font Awesome*/
 .iconHeartRegular {
   position: absolute;
   right: 31px;
@@ -814,25 +799,25 @@ footer p {
   margin-top: 0;
   margin-bottom: 20px;
 }
-footer a {
-  text-decoration: none;
-  color: #ffffff;
-}
 footer .links_footer {
   display: flex;
   flex-direction: column;
   gap: 7px;
   font-size: 16px;
 }
-footer .mentions {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
 footer i {
   width: 11px;
   height: 13px;
   margin-right: 10px;
+}
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+footer .mentions {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 
 /**************** media queries ***********************/
@@ -866,19 +851,11 @@ footer i {
     margin: 0;
     padding: 0;
   }
-  .test {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    margin: auto;
-    width: fit-content;
-    border: solid;
-    width: 100%;
-  }
   .functioning {
     width: 100%;
     height: 228.38px;
     width: fit-content;
+    padding-right: 30px;
   }
   .title_functioning {
     margin-left: 0;
@@ -896,7 +873,6 @@ footer i {
   .restaurants-cards {
     height: 553px;
     flex-wrap: wrap;
-    justify-content: baseline;
     align-items: center;
     row-gap: 50px;
     column-gap: 100px;
@@ -904,15 +880,15 @@ footer i {
   .card {
     width: 490px;
   }
+  .card .new {
+    left: 390px;
+  }
   .card img {
     width: 490px;
     object-position: 50% 68%;
   }
   .card .card2 {
     object-position: 50% 57%;
-  }
-  .card .new {
-    left: 390px;
   }
   .card #iconHeartRegular {
     left: 443px;

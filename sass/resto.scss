@@ -25,7 +25,6 @@ $dark-grey: #353535;
 }
 
 .menu_restaurants {
-  /*margin-top: -20px;*/
   top: 300px;
   background-color: $grey-body;
 }
@@ -39,16 +38,11 @@ $dark-grey: #353535;
 .menu_restaurants_img {
   width: 100%;
 }
+
 .img_restaurants {
   height: 275px;
   object-fit: cover;
   width: 100%;
-}
-
-.menu_restaurants_contain {
-  top: 40px;
-  width: 100%;
-  background-color: $grey-body;
 }
 
 .header_menu {
@@ -60,7 +54,7 @@ $dark-grey: #353535;
   gap: 20px;
   background-color: $grey-body;
   border-radius: 45px 45px 0 0;
-  position: absolute; /* élément parent: .img_restaurants */
+  position: absolute; //élément parent: .img_restaurants
   top: 280px;
 
   h1 {
@@ -71,18 +65,22 @@ $dark-grey: #353535;
     margin-left: 15px;
     margin-top: 35px;
   }
-
   .iconHeartRegular {
     top: 43px;
     left: 83%;
     bottom: auto;
   }
-
   .iconHeartSolid {
     top: 43px;
     left: 83%;
     bottom: auto;
   }
+}
+
+.menu_restaurants_contain {
+  top: 40px;
+  width: 100%;
+  background-color: $grey-body;
 }
 
 .menu {
@@ -118,17 +116,15 @@ $dark-grey: #353535;
   padding: 0 20px 20px 20px;
   cursor: pointer;
   position: relative;
-  /************* animation apparition des plats *************/
-  /**********************************************************/
+  //animation apparition des plats
   animation: appearance 5s;
   transform-origin: 0% 0%;
-  /*********************************/
 
   .contain_meal {
     display: flex;
     flex-direction: column;
     gap: 7px;
-    width: 100%; /* pour que l'animation se fasse que devant les intitulés trop long */
+    width: 100%; //pour que l'animation se fasse que devant les intitulés trop long
   }
   .meal {
     font-size: 18px;
@@ -141,7 +137,7 @@ $dark-grey: #353535;
   .price {
     font-size: 15px;
     font-weight: 700;
-    position: absolute; /* .contain_menu parent pour enlever le space between pour l'animation */
+    position: absolute; //.contain_menu parent pour enlever le space between pour l'animation
     right: 15px;
     margin: 0;
     padding: 0;
@@ -197,7 +193,7 @@ $dark-grey: #353535;
 input[type="checkbox"] {
   display: none;
 }
-/* animation au check */
+//animation au check
 input[type="checkbox"]:checked + .contain_menu {
   .iconCheck {
     width: 59px;
@@ -271,7 +267,7 @@ input[type="checkbox"]:checked + .contain_menu {
   }
 }
 
-/* Animation au dé-check */
+//Animation au dé-check
 input[type="checkbox"]:not(:checked) + .contain_menu {
   .iconCheck {
     width: 59px;

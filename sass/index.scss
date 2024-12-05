@@ -10,6 +10,15 @@ $white: #ffffff;
 $grey-body: #f6f6f6;
 $dark-grey: #353535;
 
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: $white;
+  margin: 0;
+}
+
 /************* Animation Loader HomePage ************/
 /****************************************************/
 .loader {
@@ -28,13 +37,12 @@ $dark-grey: #353535;
   .lettre {
     color: $purple;
     font-size: 40px;
-    /*animation: name duration timing-function delay iteration-count direction fill-mode play-state*/
-    animation: flash 1.2s linear infinite;
+    animation: flash 1.2s linear infinite; //animation: name duration timing-function delay iteration-count direction fill-mode play-state
   }
 }
 
+//animation du chargement de la page
 @keyframes loader {
-  /* animation du chargement de la page */
   0% {
     opacity: 1;
   }
@@ -43,12 +51,12 @@ $dark-grey: #353535;
   }
   100% {
     opacity: 0;
-    visibility: hidden; /* pour que le loader ne reste pas en position: fixed; ce qui bloque les interactions sur la page*/
+    visibility: hidden; //pour que le loader ne reste pas en position: fixed; ce qui bloque les interactions sur la page
   }
 }
 
+//animation du loader
 @keyframes flash {
-  /* animation du loader */
   0% {
     color: $green-light;
     text-shadow: 0 0 7px $green-light;
@@ -63,11 +71,9 @@ $dark-grey: #353535;
   }
 }
 
-/* effet de décalage sur chaque lettre */
-
+//effet de décalage sur chaque lettre
 .lettre:nth-child(1) {
-  /* sélection du premier enfant (i-e première lettre)*/
-  animation-delay: 0.1s;
+  animation-delay: 0.1s; //sélection du premier enfant (i-e première lettre)
 }
 .lettre:nth-child(2) {
   animation-delay: 0.2s;
@@ -97,15 +103,6 @@ $dark-grey: #353535;
   animation-delay: 1s;
 }
 
-* {
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  background-color: $white;
-  margin: 0;
-}
-
 header {
   display: flex;
   flex-direction: column;
@@ -133,6 +130,11 @@ header {
   justify-content: center;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 
+  i {
+    width: 12px;
+    height: 16px;
+    color: $dark-grey;
+  }
   input {
     border: none;
     background-color: #eaeaea;
@@ -146,11 +148,6 @@ header {
     &:focus {
       outline: none;
     }
-  }
-  i {
-    width: 12px;
-    height: 16px;
-    color: $dark-grey;
   }
 }
 
@@ -218,13 +215,6 @@ button {
   margin-left: -10px;
 }
 
-.title_restaurants {
-  padding-top: 48px;
-  padding-bottom: 26px;
-  margin: 0;
-  font-size: 24px;
-}
-
 .steps {
   margin-top: 0;
   display: flex;
@@ -232,12 +222,18 @@ button {
   align-items: center;
   gap: 25px;
 
+  .step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
   .step__contain {
     background-color: #f6f6f6;
     width: 322.49px;
     height: 72.38px;
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(149, 157, 165, 0.5); /* sur la maquette opacité ombre à 0.1 mais ne donne pas le même rendu */
+    box-shadow: 0 4px 15px rgba(149, 157, 165, 0.5); //sur la maquette opacité ombre à 0.1 mais ne donne pas le même rendu
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -245,12 +241,6 @@ button {
   i {
     padding-left: 35px;
     padding-right: 18px;
-  }
-  .step {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
   }
   p {
     font-size: 16px;
@@ -273,18 +263,12 @@ button {
   align-items: center;
 }
 
-a {
-  text-decoration: none;
-}
-
 .restaurants {
   background-color: $grey-body;
-  /*****/
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Permet aux éléments de se déplacer sur plusieurs lignes si nécessaire */
-  /*****/
+  flex-wrap: wrap; //Permet aux éléments de se déplacer sur plusieurs lignes si nécessaire
   width: 100%;
 }
 
@@ -293,7 +277,13 @@ a {
   flex-direction: column;
   align-items: baseline;
   margin: 0 auto;
-  /*width: fit-content;*/
+}
+
+.title_restaurants {
+  padding-top: 48px;
+  padding-bottom: 26px;
+  margin: 0;
+  font-size: 24px;
 }
 
 .restaurants-cards {
@@ -306,6 +296,14 @@ a {
   padding-bottom: 60px;
 }
 
+.card_contain {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
 .card {
   width: 340px;
   height: 251px;
@@ -313,13 +311,6 @@ a {
   background-color: $white;
   position: relative;
 
-  img {
-    width: 340px;
-    height: 175px;
-    border-radius: 15px 15px 0 0;
-    object-fit: cover;
-    object-position: bottom;
-  }
   .new {
     position: absolute;
     top: 15px;
@@ -334,6 +325,13 @@ a {
     border-radius: 2px;
     font-size: 14px;
     font-weight: 500;
+  }
+  img {
+    width: 340px;
+    height: 175px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    object-position: bottom;
   }
   .card2 {
     object-position: 50% 62%;
@@ -365,10 +363,6 @@ a {
   }
 }
 
-.card_contain {
-  position: relative;
-}
-
 .iconHeartSolid {
   opacity: 0;
   position: absolute;
@@ -377,7 +371,7 @@ a {
   font-size: x-large;
   cursor: pointer;
 }
-/* coeur avec bordure plus fines = icone payante sur Font Awesome*/
+//coeur avec bordure plus fines = icone payante sur Font Awesome
 .iconHeartRegular {
   position: absolute;
   right: 31px;
@@ -424,25 +418,25 @@ footer {
     margin-top: 0;
     margin-bottom: 20px;
   }
-  a {
-    text-decoration: none;
-    color: $white;
-  }
   .links_footer {
     display: flex;
     flex-direction: column;
     gap: 7px;
     font-size: 16px;
   }
-  .mentions {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-  }
   i {
     width: 11px;
     height: 13px;
     margin-right: 10px;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+  .mentions {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
   }
 }
 
@@ -480,20 +474,11 @@ footer {
     }
   }
 
-  .test {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    margin: auto;
-    width: fit-content;
-    border: solid;
-    width: 100%;
-  }
-
   .functioning {
     width: 100%;
     height: 228.38px;
     width: fit-content;
+    padding-right: 30px;
   }
 
   .title_functioning {
@@ -514,7 +499,6 @@ footer {
   .restaurants-cards {
     height: 553px;
     flex-wrap: wrap;
-    justify-content: baseline;
     align-items: center;
     row-gap: 50px;
     column-gap: 100px;
@@ -522,15 +506,15 @@ footer {
 
   .card {
     width: 490px;
+    .new {
+      left: 390px;
+    }
     img {
       width: 490px;
       object-position: 50% 68%;
     }
     .card2 {
       object-position: 50% 57%;
-    }
-    .new {
-      left: 390px;
     }
     #iconHeartRegular {
       left: 443px;
