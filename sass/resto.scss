@@ -1,0 +1,416 @@
+/*Variables*/
+$green-light: #99e2d0;
+$green: #008766;
+$blue-light: #89c8fa;
+$blue-dark: #003a68;
+$purple: #9356dc;
+$white: #ffffff;
+$grey-body: #f6f6f6;
+$dark-grey: #353535;
+
+.fa-arrow-left {
+  position: absolute;
+  top: 16.5px;
+  left: 16.5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #000000;
+  &:hover {
+    border: none;
+  }
+}
+
+.menu_restaurants {
+  /*margin-top: -20px;*/
+  top: 300px;
+  background-color: $grey-body;
+}
+
+.img_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu_restaurants_img {
+  width: 100%;
+}
+.img_restaurants {
+  height: 275px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.menu_restaurants_contain {
+  top: 40px;
+  width: 100%;
+  background-color: $grey-body;
+}
+
+.header_menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: $grey-body;
+  border-radius: 45px 45px 0 0;
+  position: absolute; /* élément parent: .img_restaurants */
+  top: 280px;
+
+  h1 {
+    font-family: "Shrikhand";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    margin-left: 15px;
+    margin-top: 35px;
+  }
+
+  .iconHeartRegular {
+    top: 43px;
+    left: 83%;
+    bottom: auto;
+  }
+
+  .iconHeartSolid {
+    top: 43px;
+    left: 83%;
+    bottom: auto;
+  }
+}
+
+.menu {
+  .title {
+    height: 27px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 10px;
+  }
+  .underline-title {
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background-color: $green-light;
+    margin-left: 10px;
+  }
+  .main_course {
+    margin-top: 30px;
+  }
+  .dessert {
+    margin-top: 30px;
+  }
+}
+
+.contain_menu {
+  height: 72px;
+  margin: 20px 10px 20px 10px;
+  background-color: $white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 0 20px 20px 20px;
+  cursor: pointer;
+  position: relative;
+  /************* animation apparition des plats *************/
+  /**********************************************************/
+  animation: appearance 5s;
+  transform-origin: 0% 0%;
+  /*********************************/
+
+  .contain_meal {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 100%; /* pour que l'animation se fasse que devant les intitulés trop long */
+  }
+  .meal {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .meal_description {
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .price {
+    font-size: 15px;
+    font-weight: 700;
+    position: absolute; /* .contain_menu parent pour enlever le space between pour l'animation */
+    right: 15px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/*************** Animation apparition plats ****************/
+/***********************************************************/
+@keyframes appearance {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.contain_menu1 {
+  animation-delay: 0.1s;
+}
+.contain_menu2 {
+  animation-delay: 0.5s;
+}
+.contain_menu3 {
+  animation-delay: 1s;
+}
+.contain_menu4 {
+  animation-delay: 1.5s;
+}
+.contain_menu5 {
+  animation-delay: 2s;
+}
+.contain_menu6 {
+  animation-delay: 2.5s;
+}
+.contain_menu7 {
+  animation-delay: 3s;
+}
+.contain_menu8 {
+  animation-delay: 3.5s;
+}
+.contain_menu9 {
+  animation-delay: 4s;
+}
+.contain_menu10 {
+  animation-delay: 4.5s;
+}
+
+/************** animation réservation de plats ******************/
+/****************************************************************/
+input[type="checkbox"] {
+  display: none;
+}
+/* animation au check */
+input[type="checkbox"]:checked + .contain_menu {
+  .iconCheck {
+    width: 59px;
+    height: 100%;
+    background-color: $green-light;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation-name: meal_reservation;
+    transform-origin: 100% 0%;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+  }
+  .price {
+    transform: translate(-50px);
+    animation-name: price;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+  }
+  .meal {
+    animation-name: overflow_meal_description;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform-origin: 0;
+    transition-duration: 0.5s;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 75%;
+  }
+  .meal_description {
+    animation-name: overflow_meal_description;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform-origin: 0;
+    transition-duration: 0.5s;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 75%;
+  }
+}
+
+@keyframes meal_reservation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes price {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+@keyframes overflow_meal_description {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0.9);
+  }
+}
+
+/* Animation au dé-check */
+input[type="checkbox"]:not(:checked) + .contain_menu {
+  .iconCheck {
+    width: 59px;
+    height: 100%;
+    background-color: $green-light;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation-name: meal_reservation_slideOut;
+    transform-origin: 100% 0%;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+  .price {
+    animation-name: price_slideOut;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+  }
+  .meal {
+    animation-name: overflow_meal_description;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform-origin: 0;
+    transition-duration: 0.5s;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  .meal_description {
+    animation-name: overflow_meal_description;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform-origin: 0;
+    transition-duration: 1s;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+}
+
+@keyframes meal_reservation_slideOut {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes price_slideOut {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes overflow_meal_description {
+  0% {
+    transform: scaleX(0.9);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 47px;
+}
+
+/****************** media queries ********************/
+@media (min-width: 1080px) {
+  body {
+    background-color: $white;
+  }
+
+  .fa-arrow-left {
+    top: 34px;
+  }
+
+  .menu_restaurants {
+    width: 100%;
+    background-color: $white;
+  }
+  .img_restaurants {
+    height: 383px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 56%;
+  }
+
+  .header_menu {
+    width: 1055px;
+    height: 115px;
+    top: 445px;
+    margin: auto;
+    justify-content: center;
+    .iconHeartRegular {
+      left: 65%;
+      top: 52px;
+    }
+    .iconHeartSolid {
+      left: 65%;
+      top: 52px;
+    }
+  }
+
+  .menu_restaurants_contain {
+    position: relative;
+    width: 1055px;
+    margin: auto;
+    top: 77px;
+    .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .starter {
+      width: 634px;
+    }
+    .main_course {
+      width: 634px;
+    }
+    .dessert {
+      width: 634px;
+    }
+  }
+
+  .footer {
+    margin-top: 77px;
+  }
+}
