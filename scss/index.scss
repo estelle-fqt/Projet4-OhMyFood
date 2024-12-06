@@ -128,7 +128,6 @@ header {
   align-items: center;
   align-content: baseline;
   justify-content: center;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 
   i {
     width: 12px;
@@ -157,6 +156,7 @@ header {
   flex-direction: column;
   align-items: center;
   height: 287px;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.2);
   h1 {
     width: 275px;
     height: 68px;
@@ -442,7 +442,7 @@ footer {
 
 /**************** media queries ***********************/
 
-@media (min-width: 1080px) {
+@media (min-width: 1025px) {
   .navbar {
     box-shadow: none;
     height: 96px;
@@ -451,12 +451,10 @@ footer {
       height: 34.2px;
     }
   }
-  .explore {
-    box-shadow: none;
-  }
   .book {
     background-color: $grey-body;
     height: 200px;
+    box-shadow: none;
     h1 {
       width: 645px;
       height: 47px;
@@ -478,7 +476,6 @@ footer {
     width: 100%;
     height: 228.38px;
     width: fit-content;
-    padding-right: 30px;
   }
 
   .title_functioning {
@@ -488,7 +485,7 @@ footer {
   .steps {
     flex-direction: row;
     padding-left: 10px;
-    gap: 35px;
+    gap: 23px;
   }
 
   .restaurants {
@@ -501,7 +498,7 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     row-gap: 50px;
-    column-gap: 100px;
+    column-gap: 45px;
   }
 
   .card {

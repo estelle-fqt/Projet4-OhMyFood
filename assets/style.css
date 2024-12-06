@@ -47,7 +47,7 @@
   background-color: #f6f6f6;
   border-radius: 45px 45px 0 0;
   position: absolute;
-  top: 280px;
+  top: 285px;
 }
 .header_menu h1 {
   font-family: "Shrikhand";
@@ -69,7 +69,7 @@
 }
 
 .menu_restaurants_contain {
-  top: 40px;
+  margin-top: 46px;
   width: 100%;
   background-color: #f6f6f6;
 }
@@ -336,7 +336,7 @@ input[type=checkbox]:not(:checked) + .contain_menu .meal_description {
 }
 
 /****************** media queries ********************/
-@media (min-width: 1080px) {
+@media (min-width: 1025px) {
   body {
     background-color: #ffffff;
   }
@@ -514,7 +514,6 @@ header {
   align-items: center;
   align-content: baseline;
   justify-content: center;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 .explore i {
   width: 12px;
@@ -542,6 +541,7 @@ header {
   flex-direction: column;
   align-items: center;
   height: 287px;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 .book h1 {
   width: 275px;
@@ -821,7 +821,7 @@ footer .mentions {
 }
 
 /**************** media queries ***********************/
-@media (min-width: 1080px) {
+@media (min-width: 1025px) {
   .navbar {
     box-shadow: none;
     height: 96px;
@@ -830,12 +830,10 @@ footer .mentions {
     width: 200px;
     height: 34.2px;
   }
-  .explore {
-    box-shadow: none;
-  }
   .book {
     background-color: #f6f6f6;
     height: 200px;
+    box-shadow: none;
   }
   .book h1 {
     width: 645px;
@@ -855,7 +853,6 @@ footer .mentions {
     width: 100%;
     height: 228.38px;
     width: fit-content;
-    padding-right: 30px;
   }
   .title_functioning {
     margin-left: 0;
@@ -863,7 +860,7 @@ footer .mentions {
   .steps {
     flex-direction: row;
     padding-left: 10px;
-    gap: 35px;
+    gap: 23px;
   }
   .restaurants {
     padding-top: 15px;
@@ -875,7 +872,7 @@ footer .mentions {
     flex-wrap: wrap;
     align-items: center;
     row-gap: 50px;
-    column-gap: 100px;
+    column-gap: 45px;
   }
   .card {
     width: 490px;

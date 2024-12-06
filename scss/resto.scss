@@ -55,7 +55,7 @@ $dark-grey: #353535;
   background-color: $grey-body;
   border-radius: 45px 45px 0 0;
   position: absolute; //élément parent: .img_restaurants
-  top: 280px;
+  top: 285px;
 
   h1 {
     font-family: "Shrikhand";
@@ -78,7 +78,7 @@ $dark-grey: #353535;
 }
 
 .menu_restaurants_contain {
-  top: 40px;
+  margin-top: 46px;
   width: 100%;
   background-color: $grey-body;
 }
@@ -348,7 +348,7 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
 }
 
 /****************** media queries ********************/
-@media (min-width: 1080px) {
+@media (min-width: 1025px) {
   body {
     background-color: $white;
   }

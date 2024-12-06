@@ -20,7 +20,7 @@ Plusieurs animations sont présentes sur ce site.
 
 Animations sur les boutons :
 Au survol, la couleur de fond des boutons principaux s’éclaircit légèrement et l'ombre autour s'intensifie.
-Pour que les visiteurs puissent sauvegarder leurs menus préférés, un bouton "J'aime" en forme de coeur est présent sur chaque carte de menu. Au clic, il se remplit progressivement.
+Pour que les visiteurs puissent sauvegarder leurs menus préférés, un bouton "J'aime" en forme de coeur est présent sur chaque carte de menu. Au clic, il se remplit.
 
 Animation de la page d'accueil :
 Au chargement de la page d'accueil, un loader est présent pendant 3 secondes.
