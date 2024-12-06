@@ -593,8 +593,8 @@ button:hover {
 }
 
 .title_functioning {
-  padding-top: 48px;
-  padding-bottom: 26px;
+  padding-top: 60px;
+  padding-bottom: 30px;
   margin: 0;
   font-size: 24px;
   margin-left: -10px;
@@ -664,8 +664,8 @@ button:hover {
 }
 
 .title_restaurants {
-  padding-top: 48px;
-  padding-bottom: 26px;
+  padding-top: 60px;
+  padding-bottom: 30px;
   margin: 0;
   font-size: 24px;
 }
@@ -856,6 +856,8 @@ footer .mentions {
   }
   .title_functioning {
     margin-left: 0;
+    padding-top: 60px;
+    padding-bottom: 30px;
   }
   .steps {
     flex-direction: row;
@@ -863,17 +865,22 @@ footer .mentions {
     gap: 23px;
   }
   .restaurants {
-    padding-top: 15px;
     padding-bottom: 5px;
     width: 100%;
+  }
+  .title_restaurants {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   .restaurants-cards {
     width: 1025px;
     height: 553px;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     row-gap: 50px;
     column-gap: 45px;
+    padding-bottom: 35px;
   }
   .card {
     width: 490px;
