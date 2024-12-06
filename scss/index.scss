@@ -287,7 +287,6 @@ button {
 }
 
 .restaurants-cards {
-  width: 1025px;
   height: 1058px;
   display: flex;
   flex-direction: column;
@@ -495,6 +494,7 @@ footer {
     width: 100%;
   }
   .restaurants-cards {
+    width: 1025px;
     height: 553px;
     flex-wrap: wrap;
     align-items: center;
