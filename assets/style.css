@@ -671,6 +671,7 @@ button:hover {
 }
 
 .restaurants-cards {
+  width: 1025px;
   height: 1058px;
   display: flex;
   flex-direction: column;
