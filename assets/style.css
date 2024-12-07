@@ -59,12 +59,10 @@
 }
 .header_menu .iconHeartRegular {
   top: 43px;
-  left: 83%;
   bottom: auto;
 }
 .header_menu .iconHeartSolid {
   top: 43px;
-  left: 83%;
   bottom: auto;
 }
 
@@ -355,23 +353,23 @@ input[type=checkbox]:not(:checked) + .contain_menu .meal_description {
     object-position: 50% 56%;
   }
   .header_menu {
-    width: 1055px;
+    width: 73.2%;
     height: 115px;
     top: 445px;
     margin: auto;
     justify-content: center;
   }
   .header_menu .iconHeartRegular {
-    left: 65%;
+    right: unset;
     top: 52px;
   }
   .header_menu .iconHeartSolid {
-    left: 65%;
+    right: 200px;
     top: 52px;
   }
   .menu_restaurants_contain {
     position: relative;
-    width: 1055px;
+    width: 73.2%;
     margin: auto;
     top: 77px;
   }
