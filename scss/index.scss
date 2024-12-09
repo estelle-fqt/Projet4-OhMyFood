@@ -41,7 +41,7 @@ body {
   }
 }
 
-//animation du chargement de la page
+//animation du loader
 @keyframes loader {
   0% {
     opacity: 1;
@@ -55,7 +55,7 @@ body {
   }
 }
 
-//animation du loader
+//animation des lettres
 @keyframes flash {
   0% {
     color: $green-light;
@@ -267,7 +267,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; //Permet aux éléments de se déplacer sur plusieurs lignes si nécessaire
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -395,10 +395,7 @@ a {
       opacity: 1;
       background: linear-gradient(#9356dc, #ff79da);
       background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
+      color: transparent;
     }
   }
 }
@@ -451,7 +448,6 @@ footer {
     }
   }
   .book {
-    background-color: $grey-body;
     height: 200px;
     box-shadow: none;
     h1 {

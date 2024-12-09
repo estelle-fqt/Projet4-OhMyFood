@@ -206,8 +206,8 @@ input[type="checkbox"]:checked + .contain_menu {
     justify-content: center;
     align-items: center;
     text-align: center;
-    animation-name: meal_reservation;
     transform-origin: 100% 0%;
+    animation-name: meal_reservation;
     animation-duration: 0.5s;
     animation-timing-function: linear;
   }
@@ -284,7 +284,7 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
     transform-origin: 100% 0%;
     animation-duration: 0.5s;
     animation-timing-function: linear;
-    animation-fill-mode: both;
+    animation-fill-mode: forwards;
   }
   .price {
     animation-name: price_slideOut;
@@ -348,10 +348,6 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
 
 /****************** media queries ********************/
 @media (min-width: 1025px) {
-  body {
-    background-color: $white;
-  }
-
   .fa-arrow-left {
     top: 34px;
   }
@@ -378,7 +374,7 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
       top: 52px;
     }
     .iconHeartSolid {
-      right: 200px;
+      right: unset;
       top: 52px;
     }
   }

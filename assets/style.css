@@ -200,8 +200,8 @@ input[type=checkbox]:checked + .contain_menu .iconCheck {
   justify-content: center;
   align-items: center;
   text-align: center;
-  animation-name: meal_reservation;
   transform-origin: 100% 0%;
+  animation-name: meal_reservation;
   animation-duration: 0.5s;
   animation-timing-function: linear;
 }
@@ -274,7 +274,7 @@ input[type=checkbox]:not(:checked) + .contain_menu .iconCheck {
   transform-origin: 100% 0%;
   animation-duration: 0.5s;
   animation-timing-function: linear;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
 }
 input[type=checkbox]:not(:checked) + .contain_menu .price {
   animation-name: price_slideOut;
@@ -336,9 +336,6 @@ input[type=checkbox]:not(:checked) + .contain_menu .meal_description {
 
 /****************** media queries ********************/
 @media (min-width: 1025px) {
-  body {
-    background-color: #ffffff;
-  }
   .fa-arrow-left {
     top: 34px;
   }
@@ -364,7 +361,7 @@ input[type=checkbox]:not(:checked) + .contain_menu .meal_description {
     top: 52px;
   }
   .header_menu .iconHeartSolid {
-    right: 200px;
+    right: unset;
     top: 52px;
   }
   .menu_restaurants_contain {
@@ -776,10 +773,7 @@ a {
   opacity: 1;
   background: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+  color: transparent;
 }
 
 footer {
@@ -829,7 +823,6 @@ footer .mentions {
     height: 34.2px;
   }
   .book {
-    background-color: #f6f6f6;
     height: 200px;
     box-shadow: none;
   }
