@@ -192,7 +192,7 @@ button {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: opacity 1000ms;
   &:hover {
-    opacity: 0.85;
+    opacity: 0.6;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   }
 }
@@ -377,6 +377,7 @@ a {
   bottom: 30px;
   font-size: x-large;
   cursor: pointer;
+  transition: opacity 1s linear;
 }
 
 /************* animation clic du coeur ***************/
@@ -396,6 +397,20 @@ a {
       background: linear-gradient(#9356dc, #ff79da);
       background-clip: text;
       color: transparent;
+      transition: opacity 1s linear;
+    }
+  }
+  input[type="checkbox"]:not(:checked) + .icons_heart {
+    content: "";
+    .iconHeartRegular {
+      opacity: 1;
+    }
+    .iconHeartSolid {
+      opacity: 0;
+      background: linear-gradient(#9356dc, #ff79da);
+      background-clip: text;
+      color: transparent;
+      transition: opacity 1s linear;
     }
   }
 }
