@@ -104,7 +104,9 @@
   padding: 0 20px 20px 20px;
   cursor: pointer;
   position: relative;
-  animation: appearance 5s;
+  opacity: 0;
+  transform: scaleX(0);
+  animation: appearance 2s forwards;
   transform-origin: 0% 0%;
 }
 .contain_menu .contain_meal {
@@ -191,6 +193,7 @@ input[type=checkbox] {
 input[type=checkbox]:checked + .contain_menu .iconCheck {
   width: 59px;
   height: 100%;
+  color: #ffffff;
   background-color: #99e2d0;
   border-radius: 0 20px 20px 0;
   position: absolute;
@@ -259,6 +262,7 @@ input[type=checkbox]:checked + .contain_menu .meal_description {
   }
 }
 input[type=checkbox]:not(:checked) + .contain_menu .iconCheck {
+  color: #ffffff;
   width: 59px;
   height: 100%;
   background-color: #99e2d0;
@@ -621,6 +625,10 @@ button:hover {
 .steps i {
   padding-left: 35px;
   padding-right: 18px;
+  color: #7e7e7e;
+}
+.steps .fa-store {
+  color: #9356dc;
 }
 .steps p {
   font-size: 16px;
@@ -816,6 +824,7 @@ footer i {
   width: 11px;
   height: 13px;
   margin-right: 10px;
+  color: #ffffff;
 }
 footer a {
   text-decoration: none;

@@ -116,7 +116,9 @@ $dark-grey: #353535;
   cursor: pointer;
   position: relative;
   //animation apparition des plats
-  animation: appearance 5s;
+  opacity: 0; //caché au chargement
+  transform: scaleX(0); // réduit au chargement
+  animation: appearance 2s forwards;
   transform-origin: 0% 0%;
 
   .contain_meal {
@@ -197,6 +199,7 @@ input[type="checkbox"]:checked + .contain_menu {
   .iconCheck {
     width: 59px;
     height: 100%;
+    color: #ffffff;
     background-color: $green-light;
     border-radius: 0 20px 20px 0;
     position: absolute;
@@ -269,6 +272,7 @@ input[type="checkbox"]:checked + .contain_menu {
 //Animation au dé-check
 input[type="checkbox"]:not(:checked) + .contain_menu {
   .iconCheck {
+    color: #ffffff;
     width: 59px;
     height: 100%;
     background-color: $green-light;
