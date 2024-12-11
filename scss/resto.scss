@@ -351,11 +351,45 @@ input[type="checkbox"]:not(:checked) + .contain_menu {
 }
 
 /****************** media queries ********************/
-@media (min-width: 1025px) {
+@media (min-width: 768px) {
   .fa-arrow-left {
     top: 34px;
   }
 
+  .img_restaurants {
+    height: 300px;
+    object-position: 50% 56%;
+  }
+
+  .header_menu {
+    top: 350px;
+    justify-content: center;
+    .iconHeartRegular {
+      right: unset;
+    }
+    .iconHeartSolid {
+      right: unset;
+    }
+  }
+
+  .menu_restaurants_contain {
+    position: relative;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    width: 550px;
+  }
+
+  .footer {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 1025px) {
   .menu_restaurants {
     width: 100%;
     background-color: $white;
