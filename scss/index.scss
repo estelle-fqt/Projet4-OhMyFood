@@ -458,14 +458,67 @@ footer {
 
 /**************** media queries ***********************/
 
-@media (min-width: 1025px) {
+@media (min-width: 768px) {
   .navbar {
-    box-shadow: none;
     height: 96px;
     img {
       width: 200px;
       height: 34.2px;
     }
+  }
+
+  .step__contain {
+    padding-left: 83.7px;
+    padding-right: 83.7px;
+  }
+
+  .card {
+    width: 490px;
+    .new {
+      left: 390px;
+    }
+    img {
+      width: 490px;
+      object-position: 50% 68%;
+    }
+    .card2 {
+      object-position: 50% 57%;
+    }
+    #iconHeartRegular {
+      left: 443px;
+    }
+    #iconHeartSolid {
+      left: 443px;
+    }
+  }
+
+  footer {
+    padding: 30px 25px 30px 25px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 16px;
+    margin-top: 0;
+    p {
+      margin: 0;
+    }
+    .links_footer {
+      width: 661px;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      .link2 {
+        padding-right: 20px;
+      }
+    }
+    .mentions {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .navbar {
+    box-shadow: none;
   }
   .book {
     height: 200px;
@@ -503,6 +556,10 @@ footer {
     flex-direction: row;
     padding-left: 10px;
     gap: 23px;
+    .step__contain {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   .restaurants {
@@ -522,26 +579,6 @@ footer {
     row-gap: 50px;
     column-gap: 45px;
     padding-bottom: 35px;
-  }
-
-  .card {
-    width: 490px;
-    .new {
-      left: 390px;
-    }
-    img {
-      width: 490px;
-      object-position: 50% 68%;
-    }
-    .card2 {
-      object-position: 50% 57%;
-    }
-    #iconHeartRegular {
-      left: 443px;
-    }
-    #iconHeartSolid {
-      left: 443px;
-    }
   }
 
   footer {
